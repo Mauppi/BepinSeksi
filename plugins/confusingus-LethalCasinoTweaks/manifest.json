@@ -1,0 +1,11 @@
+{
+  "name": "LethalCasinoTweaks",
+  "version_number": "2.0.1",
+  "website_url": "",
+  "description": "Patches the LethalCasino Blackjack game so that the deck is only shuffled when necessary.",
+  "dependencies": [
+    "BepInEx-BepInExPack-5.4.2100",
+    "mrgrm7-LethalCasino-1.1.3",
+    "Rune580-LethalCompany_InputUtils-0.7.13"
+  ]
+}

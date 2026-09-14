@@ -1,0 +1,13 @@
+{
+    "name": "Boom_Vehicles",
+    "version_number": "1.4.4",
+    "website_url": "",
+    "description": "[V81] Adds a new vehicle for you to perform with!",
+    "dependencies": [
+		"BepInEx-BepInExPack-5.4.2100",
+		"IAmBatby-LethalLevelLoader-1.7.3",
+		"DiggC-CruiserImproved-1.5.4",
+		"pacoito-itolib-0.9.3",
+		"JacobG5-JLL-1.9.10"
+	]
+}

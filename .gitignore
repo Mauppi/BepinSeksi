@@ -1,0 +1,28 @@
+# BepInEx and mod logs, including rotated logs.
+*.log
+*.log.*
+[Ll]ogs/
+
+# Runtime caches and generated LethalBots data.
+/cache/
+/config/LethalBots/Audio/GeneratedVoices/
+/config/LethalBots/DialogueMemory/
+
+# Local backups and temporary files.
+*.bak
+*.bak.*
+*.old
+*.orig
+*.tmp
+*.temp
+*~
+
+# Local credentials, editor state, and Windows/macOS metadata.
+.env
+.env.*
+!.env.example
+/.vs/
+/.vscode/
+Thumbs.db
+Desktop.ini
+.DS_Store

@@ -1,0 +1,13 @@
+{
+  "namespace": "TRizzle",
+  "name": "LethalBotsNavMeshProject",
+  "description": "[V81] An addon for Lethal Bots to add custom NavMesh links for moons.",
+  "version_number": "1.3.0",
+  "dependencies": [
+    "BepInEx-BepInExPack-5.4.2305",
+    "Sigurd-CSync-5.0.1",
+    "TRizzle-LethalBots-9.0.1"
+  ],
+  "website_url": "https://github.com/T-Rizzle12/LethalBots-NavMesh-Project",
+  "FullName": "TRizzle-LethalBotsNavMeshProject"
+}

@@ -1,0 +1,278 @@
+Listing all items in the game!
+Name: Binoculars with ID: 11
+Name: Boombox with ID: 9
+Name: Flashlight with ID: 6
+Name: Jetpack with ID: 13
+Name: Key with ID: 14
+Name: Lockpicker with ID: 8
+Name: Apparatus with ID: 3
+Name: Mapper with ID: 4
+Name: Pro-flashlight with ID: 1
+Name: Shovel with ID: 7
+Name: Stun grenade with ID: 12
+Name: Extension ladder with ID: 17
+Name: TZP-Inhalant with ID: 15
+Name: Walkie-talkie with ID: 7
+Name: Zap gun with ID: 5
+Name: Magic 7 ball with ID: 0
+Name: Airhorn with ID: 0
+Name: Bell with ID: 0
+Name: Big bolt with ID: 0
+Name: Bottles with ID: 0
+Name: Brush with ID: 0
+Name: Candy with ID: 0
+Name: Cash register with ID: 0
+Name: Chemical jug with ID: 0
+Name: Clown horn with ID: 0
+Name: Large axle with ID: 0
+Name: Teeth with ID: 0
+Name: Dust pan with ID: 0
+Name: Egg beater with ID: 0
+Name: V-type engine with ID: 0
+Name: Golden cup with ID: 0
+Name: Fancy lamp with ID: 0
+Name: Painting with ID: 0
+Name: Plastic fish with ID: 0
+Name: Laser pointer with ID: 1
+Name: Gold bar with ID: 0
+Name: Hairdryer with ID: 0
+Name: Magnifying glass with ID: 0
+Name: Metal sheet with ID: 0
+Name: Cookie pan with ID: 0
+Name: Mug with ID: 0
+Name: Perfume bottle with ID: 0
+Name: Old phone with ID: 0
+Name: Jar of pickles with ID: 0
+Name: Pill bottle with ID: 0
+Name: Remote with ID: 0
+Name: Ring with ID: 0
+Name: Toy robot with ID: 0
+Name: Rubber Ducky with ID: 0
+Name: Red soda with ID: 0
+Name: Steering wheel with ID: 0
+Name: Stop sign with ID: 0
+Name: Tea kettle with ID: 0
+Name: Toothpaste with ID: 0
+Name: Toy cube with ID: 0
+Name: Hive with ID: 1531
+Name: Radar-booster with ID: 16
+Name: Yield sign with ID: 0
+Name: Shotgun with ID: 17
+Name: Ammo with ID: 17
+Name: Spray paint with ID: 18
+Name: Homemade flashbang with ID: 0
+Name: Gift with ID: 152767
+Name: Flask with ID: 0
+Name: Tragedy with ID: 0
+Name: Comedy with ID: 0
+Name: Whoopie cushion with ID: 0
+Name: Kitchen knife with ID: 0
+Name: Easter egg with ID: 0
+Name: Weed killer with ID: 19
+Name: Soccer ball with ID: 0
+Name: Control pad with ID: 0
+Name: Garbage lid with ID: 0
+Name: Plastic cup with ID: 0
+Name: Toilet paper with ID: 0
+Name: Clock with ID: 0
+Name: Toy train with ID: 0
+Name: Zed Dog with ID: 0
+Name: Belt bag with ID: 20
+Name: Egg with ID: 0
+Name: Hand with ID: 0
+Name: Bone with ID: 0
+Name: Ribcage with ID: 0
+Name: Ear with ID: 0
+Name: Foot with ID: 0
+Name: Knee with ID: 0
+Name: Heart with ID: 0
+Name: Tongue with ID: 0
+Name: Carrion Seed with ID: 0
+Name: Big Nut with ID: 0
+Name: Butter with ID: 0
+Name: Android Arm with ID: 0
+Name: Armsel Shotgun with ID: 0
+Name: Armsel Striker with ID: 0
+Name: Basket with ID: 0
+Name: Beneli with ID: 0
+Name: Blender with ID: 0
+Name: ChainGun with ID: 0
+Name: Copper Sheet with ID: 0
+Name: DrabHoney with ID: 0
+Name: Blunderbuss with ID: 0
+Name: Cereal Box with ID: 0
+Name: DrDanielsCan with ID: 0
+Name: Grant with ID: 0
+Name: Ice Core with ID: 0
+Name: Barrel with ID: 0
+Name: Battery with ID: 0
+Name: Bee Plush with ID: 0
+Name: CleaningBottle with ID: 0
+Name: BonkBox with ID: 0
+Name: Cane with ID: 0
+Name: Casserole with ID: 0
+Name: Cookie Cutter with ID: 0
+Name: Cheese Grater with ID: 0
+Name: Controller with ID: 0
+Name: Winson with ID: 0
+Name: Crystal Shard with ID: 0
+Name: Diamond with ID: 0
+Name: Doll with ID: 0
+Name: Files with ID: 0
+Name: Fridge Magnet with ID: 0
+Name: Funhorn with ID: 0
+Name: Gaz Bottle with ID: 0
+Name: Bottle Pack with ID: 0
+Name: Hand Hammer with ID: 0
+Name: Heart Locket with ID: 0
+Name: Honey Flask with ID: 0
+Name: Hourglass with ID: 0
+Name: Hydrogen Tank with ID: 0
+Name: Idol with ID: 0
+Name: Manor Lantern with ID: 0
+Name: Sledgehammer with ID: 0
+Name: Milk Brick with ID: 0
+Name: Mini-Diver with ID: 0
+Name: Monocle with ID: 0
+Name: Condiment Bottle with ID: 0
+Name: N-Engine with ID: 0
+Name: Recorder with ID: 0
+Name: Rolling Pin with ID: 0
+Name: Scissors with ID: 0
+Name: Screen Computer with ID: 0
+Name: Shampoo Bottle with ID: 0
+Name: Soap Bar with ID: 0
+Name: Sponge with ID: 0
+Name: Stamp with ID: 0
+Name: Trash Bin with ID: 0
+Name: Vase with ID: 0
+Name: Vinyl Record with ID: 0
+Name: Fine Bottle with ID: 0
+Name: Wine Glass with ID: 0
+Name: Screw Wrench with ID: 0
+Name: Mailbox with ID: 0
+Name: Old Bell with ID: 0
+Name: Petal Burner with ID: 0
+Name: Photo Camera with ID: 0
+Name: PPaint with ID: 0
+Name: Pukeko with ID: 0
+Name: Plant Reaper with ID: 0
+Name: Sand Core with ID: 0
+Name: Pine Sap with ID: 0
+Name: Hyper-Slug with ID: 0
+Name: Hyper Slug with ID: 0
+Name: Spoon with ID: 0
+Name: Storing Unit with ID: 0
+Name: Super Deroot with ID: 0
+Name: SRT with ID: 0
+Name: Décapiteuse with ID: 0
+Name: ScanPad with ID: 0
+Name: Vain Begone with ID: 0
+Name: Weird Glass with ID: 0
+Name: Weird Tool with ID: 0
+Name: Z-Flashlight with ID: 0
+Name: Metallic Fan with ID: 0
+Name: Flame Thrower with ID: 0
+Name: Garden-Shell with ID: 0
+Name: Medium Gear with ID: 0
+Name: GIB-CANON with ID: 0
+Name: Gizmo with ID: 0
+Name: Copper Sheet with ID: 0
+Name: Grenade Launcher with ID: 0
+Name: Hand Grenade with ID: 0
+Name: Italian-Mask with ID: 0
+Name: Glass Jar with ID: 0
+Name: Jerry Can with ID: 0
+Name: Nailgun with ID: 0
+Name: Nosle with ID: 0
+Name: Package with ID: 0
+Name: Paint Bucket with ID: 0
+Name: Frying Pan with ID: 0
+Name: Large Pizzabox with ID: 0
+Name: Electric Drill with ID: 0
+Name: R-Engine with ID: 0
+Name: Super Shotgun with ID: 0
+Name: Rocket Launcher with ID: 0
+Name: Sirup-Hive with ID: 0
+Name: Sap-Hive with ID: 0
+Name: Wire Spool with ID: 0
+Name: Treteau with ID: 0
+Name: Zappinator with ID: 0
+Name: Gem with ID: 0
+Name: Gib-Shell with ID: 0
+Name: Gibson with ID: 0
+Name: Guardian Laser with ID: 0
+Name: Jet Wings with ID: 0
+Name: Kevin with ID: 0
+Name: Pink soda with ID: 0
+Name: Present with ID: 0
+Name: Prickle Cherry with ID: 0
+Name: Salt Container with ID: 0
+Name: Secret Key with ID: 0
+Name: Sirup Hive with ID: 0
+Name: Talkie Walker with ID: 0
+Name: Tazer Gun with ID: 0
+Name: Tea cup with ID: 0
+Name: Toaster with ID: 0
+Name: Umbrella with ID: 0
+Name: Energy Pack with ID: 0
+Name: Vindium Tube with ID: 0
+Name: Watering Can with ID: 0
+Name: Big Weight with ID: 0
+Name: Utility Bag with ID: 0
+Name: Flip lighter with ID: 0
+Name: Impact flash with ID: 0
+Name: Jammer with ID: 0
+Name: Large jug with ID: 0
+Name: Light crowbar with ID: 0
+Name: Military shotgun with ID: 0
+Name: Plastic canister with ID: 0
+Name: Single shotgun with ID: 0
+Name: Fuse with ID: 0
+Name: The awesome doohickey blaster with ID: 0
+Name: Elevator key with ID: 0
+Name: ShyGuyPainting with ID: 0
+Name: Double-Barreled Shotgun with ID: 37817
+Name: Shell with ID: 37817
+Name: SlayerShotgun with ID: 3719823
+Name: Grabbable Turret with ID: 3719824
+Name: Grabbable Landmine with ID: 3719825
+Listing all unlockable items in the game!
+Name: Orange suit with ID: 0
+Name: Green suit with ID: 1
+Name: Hazard suit with ID: 2
+Name: Pajama suit with ID: 3
+Name: Cozy lights with ID: 4
+Name: Teleporter with ID: 5
+Name: Television with ID: 6
+Name: Cupboard with ID: 7
+Name: File Cabinet with ID: 8
+Name: Toilet with ID: 9
+Name: Shower with ID: 10
+Name: Light switch with ID: 11
+Name: Record player with ID: 12
+Name: Table with ID: 13
+Name: Romantic table with ID: 14
+Name: Bunkbeds with ID: 15
+Name: Terminal with ID: 16
+Name: Signal translator with ID: 17
+Name: Loud horn with ID: 18
+Name: Inverse Teleporter with ID: 19
+Name: JackOLantern with ID: 20
+Name: Welcome mat with ID: 21
+Name: Goldfish with ID: 22
+Name: Plushie pajama man with ID: 23
+Name: Purple Suit with ID: 24
+Name: Bee Suit with ID: 25
+Name: Bunny Suit with ID: 26
+Name: Disco Ball with ID: 27
+Name: Microwave with ID: 28
+Name: Sofa chair with ID: 29
+Name: Fridge with ID: 30
+Name: Classic painting with ID: 31
+Name: Electric chair with ID: 32
+Name: Dog house with ID: 33
+Name: Dalton Suit with ID: 34
+Name: PSSuit with ID: 35
+Name: PSR with ID: 36
+Name: SRM with ID: 37

@@ -1,0 +1,12 @@
+{
+  "namespace": "TRizzle",
+  "name": "NavMeshInCompanyRedux",
+  "description": "[V81] Enables the use of AI pathfinding and navigation in the Company Building allowing the spawning of Enemies.",
+  "version_number": "1.2.2",
+  "dependencies": [
+    "BepInEx-BepInExPack-5.4.2305",
+    "Sigurd-CSync-5.0.1"
+  ],
+  "website_url": "https://github.com/T-Rizzle12/NavMeshInCompanyRedux",
+  "FullName": "TRizzle-NavMeshInCompanyRedux"
+}

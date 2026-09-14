@@ -1,0 +1,17 @@
+{
+  "namespace": "TRizzle",
+  "name": "LethalBots",
+  "description": "[V81] A Lethal Company Mod that adds bot players to the game. Based off of the code of the mod Lethal Internship.",
+  "version_number": "12.1.4",
+  "dependencies": [
+    "BepInEx-BepInExPack-5.4.2305",
+    "Evaisa-LethalLib-1.2.0",
+    "Sigurd-CSync-5.0.1",
+    "Rune580-LethalCompany_InputUtils-0.7.13",
+    "JS03-SpeechRecognitionAPI-1.0.0",
+    "TRizzle-NavMeshInCompanyRedux-1.0.0",
+    "TRizzle-LethalBotsNavMeshProject-1.2.0"
+  ],
+  "website_url": "https://github.com/T-Rizzle12/Lethal-Bots",
+  "FullName": "TRizzle-LethalBots"
+}

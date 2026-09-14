@@ -1,0 +1,1590 @@
+# Changelog
+
+<details>
+
+  <summary>2.0.1</summary>
+
+# Additions
+ - Added DropEnemy (This event allows enemies to spawn from the dropship).
+
+# Fixes
+ - MaskDrop chance didn't roll from 0 to 100 in percent chance properly, because I referenced the wrong variable OOPS.
+
+# Changes
+ - Removed YesFox checks
+ - Removed Foxy event, and its checks
+ - Removed Zeranos check because I apparently left it in as well (also rip Zeranos) :'(
+
+</details>
+<details>
+
+  <summary>2.0.0</summary>
+
+Due to how major the update is, the update is very much not compatible with previous updates.
+
+# Additions
+ - Added SafeOutside
+ - Added SafeEverywhere
+ - Added SlimeOUtside
+ - Added TZPCrazy
+ - Added MaskDrop
+
+# Fixes
+ - Fixed a player teleport issue that caused unused player controllers to teleport.
+ - Fixed mscan command not working when in orbit due to an oversight on my side.
+
+# Changes
+ - Major reworking and cleanup of some obsolete code and unnecessary functions.
+
+</details>
+
+<details>
+
+  <summary>1.71.0</summary>
+
+# Additions
+ - Added new API calls that could be useful.
+
+# Fixes
+ - Fixed a bug where spawn chance grabbed the wrong variable data. (The famous "0.00x" issue.
+ - Fixed a spacing issue in the UI related to the weather and heat setting.
+ - Fixed an issue with the save mechanics for Randomizer (Thanks TRizzle)
+ - Fixed a bug that caused max caps to be ignored in randomizer settings in certain cases if the ignore max cap settings was enabled. This functionality can be brought back (if needed) via a new setting if someone wants variables to climb up like crazy and be ignored. (Thank you TRizzle).
+ - Fixed a blacklist issue (haven't tested it fully). Might fix the modded moon name issue people had?
+
+# Changes
+ - Cleaned up some event calls on the randomizer side function. May increase performance slightly when randomizing.
+ - Changed some variable numbers for the defaults for randomizer.
+ 
+
+</details>
+<details>
+
+  <summary>1.70.1</summary>
+
+# Additions
+ - mrandom command that evaluates your randomizer settings and returns how good a run is.
+
+# Changes
+ - Some changes to Exploding Items -- still kinda broken.
+ - Any Event can now be fully go up to 2147483647
+ - Event selector can handle bigger numbers
+
+</details>
+<details>
+
+  <summary>1.70.0</summary>
+
+This update adds several new features to BCMER that change how you play the game, quality of life, and a new event.
+
+# Additions
+ - Added SEVERAL aliases to events. Vanilla Events and Modded Events files may need to be regenerated to show this.
+ - Exploding Items Event. It's like grabbable landmine but crazier. Beta for now.
+ - Randomizer mode. Enjoy different playstyles and runs. WITH SAVE DATA. May not fully work as expected
+
+</details>
+
+<details>
+
+  <summary>1.61.0</summary>
+
+This updates adds a few new feature as well as fixes and stuff.
+
+# Additions
+ - Added LunarConfig support (PR 44)
+
+# Fixes
+ - A null reference error that could occur.
+ - Fixed Dawnlib hazard code (PR 44)
+ - Fixed grabbable turrets, landmines (PR 45)
+
+# Changes
+ - Peformance Increases to Slayer Shotgun (PR 45)
+ - Kamikazie bugs imporvements (PR 45)
+ - Desync fixes for nutslayer (PR 45)
+ - Anticoilhead behaviour adjustments + player collision fixes (PR 45)
+ - Silenced a log message that really didn't need to occur everytime.
+ - Fixed whitelist/blacklist feature. Uses the "PlanetName" and "Name" variables attached to levels.
+
+</details>
+<details>
+
+  <summary>1.60.2</summary>
+
+# Fixes
+ - EventManager had two events registered twice.
+ - fixed teleportertraps spawning code
+
+</details>
+<details>
+
+  <summary>1.60.1</summary>
+
+# Added:
+ - Added some UI scale, rotation, position settings
+ - Added SlimeInisde event (beta, and special) but should work fine.
+
+# Changes
+ - Optimizations to DDay event
+
+# Removed
+ - Removed LockedDoors
+
+</details>
+<details>
+
+  <summary>1.60.0</summary>
+
+This version adds several changes for things like language, color, and such.
+
+# Added:
+ - Added language settings and more color settings.
+
+# Changes
+ - Optimizations made on the code.
+ - Several ui elements can be changed and colored.
+ - Rare event was made more rare.
+
+</details>
+
+<details>
+
+  <summary>1.50.7</summary>
+
+fixes and stuff
+
+# Fixes
+ - Tips should now run on client.
+
+</details>
+<details>
+
+  <summary>1.50.6</summary>
+
+fixes and stuff
+
+# Fixes
+ - fixed some stuff related to bracken event, and oldbird event.
+ - removed dead code
+ - fixed walking turrets event -- may need to regen moddedevent file
+ - code rebirth used for code rebirth giants event.
+
+# Changes
+ - seamine and bertha use beta events, this will be in place until i fix dawnlib compat with bcmer.
+ - active state and executed state are public.
+
+</details>
+<details>
+
+  <summary>1.50.5</summary>
+
+Annoying bug fixes but they should be good.
+
+# Fixes
+ - Nutslayer name space issue with Kamikazie bugs should now no longer occur.
+ - Fixed some inside hazard spawn events, damn it was annoying.
+
+# Changes
+ - SID has some new fun properties.
+ - Custom events should now be able to handle the new properties that were added to MEvents. Somewhat tested, might be buggy.
+ - API can now read some properties of custom events.
+
+</details>
+<details>
+
+  <summary>1.50.4</summary>
+
+# Additions
+ - Added LockedDoors as a beta.
+ - Tips can now have custom titles and be toggled between warning mode or alert mode.
+
+# Fixes
+ - Fixed Kiwibird event and turned it out of beta mode.
+
+</details>
+<details>
+
+  <summary>1.50.3</summary>
+
+# Fixes
+ - Fixed an logic mistake that caused events to not show up at all within the event probability feature.
+</details>
+<details>
+
+  <summary>1.50.2</summary>
+
+Adds a few features courtesy of suggestion by Moroxide.
+
+# Additions
+ - Config option that allows you to change the probability of events occurring on any day. Defaults to 100%. Also can be scaled with difficulty.
+ - Config option to add tip messages (more like warnings) for any event with description selection. Perfect for showing messages like "THERE'S GONNA BE LOTS OF SPIDERS TODAY" etc. There are also settings to control the initial time the first popup happens and the time in between each one.
+
+# Changes
+ - Show events in chat option has been moved to UI config.
+</details>
+
+<details>
+
+  <summary>1.50.1</summary>
+
+This update adds aliases and some changes and fixes to BCMER. Some settings may need to manually edited or regenerated to reflect these. A future update will come to supply custom events with some of the new things added in recent updates. 
+
+# Additions
+ - Event aliases. Keep in mind event aliases are case-insensitive and no two or more events should share the same aliases.
+ - You can force events via Aliases.
+ - Aliases added for FootballScrap: SoccerBall, Soccer.
+ - Aliases added for SussyPainting: Paintings, Painting.
+ = Aliases added for TimeChaos: FastDay, MadeInHeaven.
+
+# Changes
+ - Kiwibird is now also a beta event (again i think)
+ - mevents command shows special and beta events, as well as the extra settings for events.
+
+# Fixes
+ - In the dice events (BadDice, Dice): Rusty => RustyItem, Sacrificer => SacrificerItem
+ - In the train event: toy train => ToyTrain
+ - In the SussyPainting event: Painting => FancyPainting
+ - In the FootballScrap event: Soccer ball => SoccerBall
+
+</details>
+<details>
+
+  <summary>1.50.0</summary>
+
+This update adds breaking changes (Insane, and Rare). It is recommended that everyone on your sessions updates to 1.50.x in order to play together.
+
+# Additions
+ - Added Insane
+ - Added Rare
+
+# Changes
+ - SID => Rare
+ - Hell => Insane
+ - NutSlayersMore => Insane
+ - TimeChaos => Insane
+ - Tweaked MaskItems
+ - Tweaked Clock
+ - Tweaked ControlPad
+ - Tweaked FootballScrap
+ - Tweaked EasterEggs
+ - UI changed to reflect Insane and Rare
+
+</details>
+<details>
+
+  <summary>1.40.4</summary>
+
+# Additions
+ - SID event to the beta events. Single Item Day event. This will be featured under Special Events when ready.
+
+</details>
+<details>
+
+  <summary>1.40.3</summary>
+
+# Additions
+ - Added a feature that disables brutal from modifying level data properties OUTSIDE of events. Disabled by default
+
+# Removal
+ - Removed unneeded variables/config settings that are not needed (the hell/very late time adjustment thing that was leftover. because you can just adjust the time variable to 1, 1, 1, 1 if you wish for it to be regular lethal time or something. no need for a config to switch between turning it off and on.).
+
+# Fixes
+ - Fixed the readme, again.
+ - Cleaner event is fixed. May need to regen config or change enemy name to EnemyCleaningDrone for fix.
+
+</details>
+<details>
+
+  <summary>1.40.2</summary>
+
+This update provides some minor tweaks, and removals of some features.
+
+# Additions
+ - Added (Work In Progress) API. More on this later with potential documentation.
+ - Vanilla events that cause enemies to spawn in places that would require StarLancerEnemyEscape for them to otherwise behave properly will have those values set to 0 to prevent improper or broken AI behaviour. The events will still work without StarlancerEnemyEscape, but just with the spawning location changes. Let me know if I missed any.
+ - Added a config option for the Enemy Escape Mod Checks (This is for preventing spawning enemies where they would break if the mod isn't present). Disable if you wish to allow enemies to spawn in spots that may potentially break its behavior.
+
+# Removal
+ - Removed EndlessElevatorPatch from Zeranos.
+ - Removed reroll on dynamic interior setting.
+
+</details>
+<details>
+
+  <summary>1.40.1</summary>
+
+This update fixes a bug, and does some minor tweaks.
+
+# Additions
+ - Drop down for selecting values that are affected by heat. You may need to regenerate the config for it to run properly.
+ - Ability to force certain events if max heat is reached.
+
+# Fixes
+ - Fixed a bug that could cause some heat data to be wiped after a lobby reset after quitting out of the game.
+
+</details>
+<details>
+
+  <summary>1.40.0</summary>
+
+This update is most definitely incompatible with older BCMER versions, but packs a lot of features in.
+
+# Additions
+ - Speedrun Mode.
+ - Heat Scaling System, which makes revisiting moons more dangerous. Disabled by default. (Check readme for more information).
+
+# Fixes
+ - A bug that would occur because of incorrectly named enemies, which would cause other mods to pull their vanilla-like counterparts.
+
+</details>
+
+<details>
+
+  <summary>1.31.0</summary>
+
+This update adds breaking changes that are present from the Kidnapper Fox event that will most likely break if playing with older BCMER versions.
+
+# Additions
+ - New mold spawn flag scaling system
+ - Added KidnapperFox event.
+
+# Fixes
+ - Toilet Paper event is fixed now. Entry should be `ToiletPaperRolls`. File may need to be regenerated, or manually changed to reflect these changes.
+ - Garbage Lids event is fixed now. Entry should be `GarbageLid`. File may need to be regenerated, or manually changed to reflect these changes.
+ - Control Pads event is fixed now. Entry should be `ControlPad`. File may need to be regenerated, or manually changed to reflect these changes.
+ - Plastic cup event is fixed now. Entry should be `PlasticCup`. File may need to be regenerated, or manually changed to reflect these changes.
+
+
+</details>
+<details>
+
+  <summary>1.30.7</summary>
+
+# Fixes
+ - Zeddog event is fixed now. Entry in game before was `Zed dog`, and now is `Zeddog`. File may need to be regenerated, or manually changed to reflect these changes.
+
+</details>
+<details>
+
+  <summary>1.30.6</summary>
+
+# Additions
+ - Scan Van now is affected by Cruiser Failure event.
+
+# Changes
+ - Cadaver is no longer a "Beta" event. Also the file for vanilla events or the cadaver events section may need to be regenerated in the config to follow the correct format again.
+
+</details>
+<details>
+
+  <summary>1.30.5</summary>
+
+# Fixes
+ - Some events executed when they were not supposed to.
+
+# Changes
+ - Some events were moved to the new Beta events feature that can be enabled to distinguish itself from Special Events, which are more feature complete.
+
+</details>
+<details>
+
+  <summary>1.30.4</summary>
+
+# Fixes
+ - RealityShift was causing null issues, preventing items from being grabbable.
+
+</details>
+<details>
+
+  <summary>1.30.3</summary>
+
+# Additions
+ - Global event disable. Could be useful for some debugging, or running brutal without any events.
+
+</details>
+<details>
+
+  <summary>1.30.2</summary>
+
+# Additions
+ - Added Whitelist
+ - Added MHazard Command to Terminal
+
+</details>
+<details>
+
+  <summary>1.30.1</summary>
+
+This update adds events for v80. The fox event will come later. Please keep in mind these events are not final and require special events to be enabled. I have not tested these too well so be careful and use at your own risk!
+
+# Additions
+ - Added Puma Event
+ - Added Cadaver Event
+ - Added Stingray Event
+
+</details>
+<details>
+
+  <summary>1.30.0</summary>
+
+The second release for a v80 beta build. (The first one was posted onto the Modding Discord)
+
+# Changes
+ - All Item Events were fixed to use new constructor
+ - Cleaned up a lot of code in the main plugin file.
+ - Reworked Enemy Spawn slightly
+ - Reworked Item Spawn Slightly
+ - Redid some networking
+ - Added new internal handling for new enemies.
+
+</details>
+<details>
+
+  <summary>1.29.2</summary>
+
+Potentially the last v73 update for BCMER. V73 versions are from 1.26.0 to 1.29.x. 1.30.x and above will mark v80 (and other future versions of Lethal that may come out). 
+
+# Additions
+ - Currently ONLY outside hazard support for Dawnlib managed map object for custom events is now a thing. Please keep in mind this feature is a work in progress, and only hazards placed outside may work at this moment. I plan to continue development on the compatibility with Xu's help as Dawnlib enters V80. 
+
+# Changes
+ - Removed unnecessary comment pertaining to Metal events (was a leftover debug thing not needed)
+</details>
+<details>
+
+  <summary>1.29.1</summary>
+
+Small fix for previous update. 97% sure it is compatible with 1.29.0.
+
+# Fixes
+ - MetalSwitch, NotMetal, IsMetal should no longer overlap eachother.
+</details>
+<details>
+
+  <summary>1.29.0</summary>
+
+This update is likely a breaking changes update.. so 1.29.x may not be compatible with users using 1.28.x or below.
+
+# Fixes
+ - Kamikazie bugs could sometimes have an item search bug occur that would result in null states occurring in the AI.
+ - The "Failed to update keyPressEnabledTyping: Object reference not set to an instance of an object" should no longer occur at all.
+
+# Changes
+ - Attempts a keyboard layout fallback (related to keyPressEnabledTyping issue)
+ - VeryLateShip Time Modifier can be adjusted and scaled via config
+ - Hell time modifier can be adjusted and scaled via config.
+
+# Additions
+ - MetalOff Event
+ - IsMetal Event
+ - MetalSwitch Event
+
+In other news, preparing for some custom weather things and Dawnlib support.
+ 
+</details>
+<details>
+
+  <summary>1.28.3</summary>
+
+# Fixes
+ - Hopefully weather is now fixed as of the latest BCMER update. Rebuilt Brutal against the newest versions of the weather mods, which had broken previous builds of BCMER.
+ 
+</details>
+<details>
+
+  <summary>1.28.2</summary>
+
+# Changes
+ - Temporarily removed Mimic compatibility and mimic events from brutal. The mimics mod should still work, but the Brutal events are gone for now due to bugs.
+ 
+</details>
+<details>
+
+  <summary>1.28.1</summary>
+
+# Fixes
+ - BCMER Commands, regardless if the host can only run it or not, should not cause a null reference exception anymore when ran from clients. This should help open the road to allowing more customization to the mcommands.
+ 
+</details>
+<details>
+
+  <summary>1.28.0</summary>
+
+# Additions
+ - MSCAN Command which displays the items scrap values and amounts with respect to brutal company modifiers. There is also a setting in CoreProperties which allows Brutal's MSCAN command replace the "scan" command keyword itself. This can be disabled if you have another mod that handles this feature that you prefer.
+ 
+</details>
+<details>
+
+  <summary>1.27.10</summary>
+
+# Fixes
+
+ - Fixed weather events w/ TeleportIn Event
+ 
+</details>
+<details>
+
+  <summary>1.27.9</summary>
+
+# Fixes
+
+ - Apparently V73 broke Hotbarhassle/hotbarmania or something? well it's fixed now.
+ 
+</details>
+
+<details>
+
+  <summary>1.27.8</summary>
+
+# Changes
+
+ - ShipInventory => ShipInventoryUpdated for Ship Inv checks for difficulty.
+ 
+</details>
+
+<details>
+
+  <summary>1.27.7</summary>
+
+# Fixed
+
+ - Fixed BerserkTurrets
+ 
+</details>
+<details>
+
+  <summary>1.27.6</summary>
+
+# Fixed (Hopefully)
+
+ - Fixed TrapsFailure.
+ - Fixed DoorCircuitFailure
+ 
+</details>
+<details>
+
+  <summary>1.27.5</summary>
+
+# Changes
+
+ - Just some small event clean up stuff, and apparently adding events that disappeared at some time? Late Late night/early morning release -- hopefully doesn't break things.
+ 
+</details>
+<details>
+
+  <summary>1.27.4</summary>
+
+# Additions
+
+ - You can now toggle NutSlayers being damaged to other enemies. Only works if the immortal setting is turned off.
+
+# Fixes
+
+ - Fixes several networking issues that may have caused events to potentially softlock.
+
+</details>
+<details>
+
+  <summary>1.27.3</summary>
+
+# Additions
+
+ - Added Cruiser Failure as an event that can occur.
+
+</details>
+<details>
+
+  <summary>1.27.2</summary>
+
+# Fixes
+
+ - Fixed a bug with the Zeranos Elevator Compatibility.
+
+</details>
+<details>
+
+  <summary>1.27.1</summary>
+
+# Additions
+
+ - Custom Color Support for UI Assets. This allows you to set your own themes for Brutal.
+
+</details>
+<details>
+
+  <summary>1.27.0</summary>
+
+# Changes
+
+ - Moon Blacklisting now Ignore Case Sensitivity, and should work with checking against the variable not having numbers, still uses the planetName parameter, but the numbers do not need to be written in.
+ - Transmutation Blacklist info is fixed and reflects the more accurate instructions.
+ - TerminalAPI, and LethalNetworkAPI have been dropped from being needed, as no longer depend on them.
+ - Removed BCME Code Security Check, and Icarus (which was a scrapped unfinished kinda event thing)
+ - Reworked and optimized several events. Thanks for the pull request Unloadeed!
+
+# Fixes
+
+ - Custom Events will no longer crash if custom weather is specified but weather handler mods are off.
+
+</details>
+<details>
+
+  <summary>1.26.10</summary>
+
+# Additions
+
+ - ALL Events now support moon blacklisting on a per event basis, this also works for custom events. Use planetName variable, so for example, Vow is "56 Vow".
+
+</details>
+
+<details>
+
+  <summary>1.26.9</summary>
+
+# Changes
+
+ - Changelog Fix because whoops
+
+</details>
+<details>
+
+  <summary>1.26.8</summary>
+
+# Changes
+
+  - Added more compat for readme section
+  - Updated LethalNetworkAPI recommended version
+  - Updated TerminalAPI recommended version
+
+# Fixes
+
+  - Readme issue because apparently I deleted a section
+
+</details>
+<details>
+
+  <summary>1.26.7</summary>
+
+# Additions
+
+  - Blacklist for transmutation items. At this time, does not call from mitems yet. but calls from the GrabbableObject's itemproperties.ItemName. Potentially plan to fix this in due time or print out all GrabbableObject scrap items.
+  - More logging when it comes to scrap transmutes.
+
+# Fixes
+
+  - An issue with difficulty capping has been fixed, and as a plus is raised to the max float for an upper limit if uncapped.
+
+</details>
+<details>
+
+  <summary>1.26.6</summary>
+
+# Additions
+
+  - Logarithmic Player Scaling: Caps at values below the current difficulty when there is less players on than the base players amount to avoid issues with mathematics (Plus I don't want to calculate weird imaginary numbers). The higher the online players is from the base amount of players, the faster it slows down the scaling. Scaling factors both positive/negative close to 0 will have less impact of the overall difficulty.
+  - Cubic Player Scaling: Steeper curves the further the amount of players online is from the base player amount. Values closer to 0 for the scaling factor will cause more gradual changes.
+
+# Changes
+
+  - Player Scaling supports negative base player amounts. This is useful for simulating there being more players on then there actually are. which in turn, makes it difficult/easier earlier depending on player scaling factors.
+  - Incorrect names for the scaling formula will result in the game selecting linear mode.
+
+# Fixes
+
+  - An issue related to the more exits event should now be fixed which was causing game to spew errors when creating passages.
+
+</details>
+<details>
+
+  <summary>1.26.5</summary>
+
+# Additions
+
+  - Custom Events should properly handle custom weather now. Please note that only custom weather can be used per event at this time.
+
+</details>
+<details>
+
+  <summary>1.26.4</summary>
+
+# Additions
+
+  - Added Blood Moon Weather
+  - Added Majora's Moon Weather (LateShip and VeryLateShip will not roll. Hell will have its time event stuff not occur)
+  - Added Forsaken Weather
+  - Added Hurricane Weather
+  - Added Hallowed Weather
+  - Semi-added custom support for weathers in custom events -- still seems slightly broken. will do more testing.
+
+</details>
+<details>
+
+  <summary>1.26.3</summary>
+
+# Fixes
+
+  - Fixed an event description desync that could occur due to YesFox mod being present
+
+</details>
+
+
+<details>
+
+  <summary>1.26.2</summary>
+
+A huge update that adds a lot of events!
+
+# Additions
+
+  - Added SCP939 Event (Needs SCP939 Mod)
+  - Added SCP682 Event (Needs SCP682 Mod)
+  - Readded Barber Events (Needs BarberFixes for it to run) 
+  - Added Windy Custom Weather Event (CodeRebirth)
+  - Added Meteor Shower Custom Weather Event (CodeRebirth)
+  - Added SolarFlare Custom Weather Event (LethalElements)
+  - Added Heatwave Custom Weather Event (LethalElements)
+  - BCMER now has a custom weather handler
+
+# Fixes
+
+  - Descriptions and loading related to KidnapperFox Event
+
+</details>
+
+<details>
+
+  <summary>1.26.1</summary>
+
+# Additions
+
+  - Added SeveredBits (Neutral)
+
+</details>
+
+<details>
+
+  <summary>1.26.0 (V73+)</summary>
+
+# Fixes
+
+  - Built for V73.
+
+</details>
+
+
+<details>
+
+  <summary>1.25.3</summary>
+
+# Additions
+
+  - AntiBounty Event (You lose money for kills, and yes even if enemies themselves cause it too. Should one run out of credits, the total bounty amount will be paid off on future kills until you owe nothing)
+  - TrapsFailure Event (Only affects vanilla traps as of right now, will look into supplying modded traps later)
+  - BerserkTurrets Event
+
+# Changes
+
+  - Small additions to LockedEntrances
+
+# Fixes
+
+  - Microwave is now considered for ship difficulty scrap counting.
+
+</details>
+
+<details>
+
+  <summary>1.25.2</summary>
+
+# Fixes
+
+  - Thanks to a few friends, fixed RealityShift event hopefully.
+
+# Changes
+
+  - Hell, VeryEarlyShip, EarlyShip, LateShip, VeryLateShip can now have starting time for the moon customized.
+
+</details>
+<details>
+
+  <summary>1.25.1</summary>
+
+This update is mostly me attempting to fix stuff up with kiwi bird event.
+
+# Additions
+
+  - LockedEntrance, requires Special Event to be enabled
+
+# Fixes
+
+  - Kiwi Bird doesnt die upon spawn (hopefully)
+
+# Changes
+
+  - Modified values for kiwi bird event.
+
+</details>
+<details>
+
+  <summary>1.25.0</summary>
+
+This update brings BCMER into v70 finally! Bugs and crashes may occur. Versions prior to this may not be compatible with v70.
+
+# Additions
+
+  - Added GiantKiwi and its egg to BCMER's register.
+  - Added 'KiwiBird' event to BCMER, but currently depends on Special Events being enabled. Currently not tested fully.
+
+# Fixes
+
+  - PhonesOut event will now only harmony patch if LethalPhones is present
+  - Desync/Despawn bugs related to outside objects and hazards should properly despawn and sync up to all clients now.
+  - Enemy behavior in the _EnemyAI.cs file broke on some modded moons. While it has been removed from BCM, I have made is so it only will be present if StarLancerAI is not present. This is so I can try to monitor and study the behavior of this code more closely, but I highly recommend the use of StarLancerAI fix if enemy behavior should break.
+    Project updated for v70.
+
+</details>
+<details>
+
+  <summary>0.24.10</summary>
+
+# Fixes
+
+  - Small fix related to RPC method on the PhonesOut event.
+
+</details>
+<details>
+
+  <summary>0.24.9</summary>
+
+# Fixes
+
+  - PhonesOut event will now only harmony patch if LethalPhones is present
+  - Desync/Despawn bugs related to outside objects and hazards should properly despawn and sync up to all clients now.
+
+</details>
+<details>
+
+  <summary>0.24.8</summary>
+
+Just a small update that adds one new event. Though.. I also want to add more "good" or "VeryGood" rated events too.
+# Additions
+
+  - Added PhonesOut event, which requires Lethal Phones.
+
+</details>
+<details>
+  <summary>0.24.7</summary>
+
+# Additions
+
+  - Readded ShipLightsFailure
+  - Added Compatibility Check to SelfSortingStorage. Future Items checks will be added.
+
+# Changes
+
+  - ShipLightsFailure should no longer crash and works perfectly for both the host and clients
+  - FlashlightsFailure event should work properly for both the host and client correctly. Grabbing and charging flashlights in general should fail to work. Upon leaving, flashlights should register as fully charged again and will display as such correctly.
+  - Semi-what fixed NutcrackerAI.cs issue, and somewhat introduced a server rpc bug but it shouldn't be spamming the object reference missing thing every tick. If anyone has more experience with enemy ai, please feel free to get in contact with me, so we can see what we can do to fix the issues better!
+</details>
+
+<details>
+  <summary>0.24.6</summary>
+
+This update adds new events and modifies some various things in the code. I may do a bit of tweaking with the values for some of these new events down the road.
+
+# Additions
+
+  - Added Time Chaos. Requires Special Events to be enabled.
+  - Added the Leaf Boys from BioDiversity. https://thunderstore.io/c/lethal-company/p/super_fucking_cool_and_badass_team/Biodiversity/
+  - Added Welcome To Ooblterra event. https://thunderstore.io/c/lethal-company/p/Skeleton_Studios/Welcome_To_Ooblterra/
+
+# Changes
+
+  - Updated readme to reflect mod compatibility.
+  - ReadSettingsEarly function should run better.
+  - Worm event no longer spawns snare fleas outside, and instead buffs snare fleas spawns inside.
+
+</details>
+<details>
+  <summary>0.24.5</summary>
+
+# Additions
+
+  - Added [VeryBad] Soul Devourer event from Soul Devourer Enemy Mod. https://thunderstore.io/c/lethal-company/p/bcs4313/Soul_Devourer_Enemy/
+  - Added [Bad] Light Eater Enemy event. https://thunderstore.io/c/lethal-company/p/Lega/LightEater/
+
+# Fixes
+
+  - Shrimp now depends on LCShrimpMod, fixing an incorrect mod dependency check.
+  - Forced Events will no longer complain about an empty white space
+
+# Changes
+
+  - MoaiEnemy event has been nerfed.
+  - Soul Devourer is now its own event.
+
+</details>
+<details>
+  <summary>0.24.4</summary>
+
+# Fixes
+
+  - Hopefully the issues people have had to that ShipLightsFailure being removed, or something about Terminal nodes with it? ShipCoreFailure may still attempt to roll "ShipLightsFailure" if your events config for shipcorefailure still references shiplightsfailure, but it will not cause a softlock. This should only affect users who have the same config files before 0.24.2.
+
+</details>
+
+<details>
+  <summary>0.24.3</summary>
+
+Apparently the changelog never saved despite me double checking it, it somehow reverted... This version is just to fix the changelog and adds nothing on top of 0.24.2.
+
+</details>
+
+<details>
+  <summary>0.24.2</summary>
+
+# Additions
+
+  - Ability to let other mods handle power counts and spawn curves. A few settings will still affect these as I thought users may be interested in those features still working alongside this.
+
+# Removed
+
+  - Temporarily removed Ship Lights Failure for the time being due to crashes. Hopefully it can be back in a timely manner.
+
+</details>
+
+<details>
+  <summary>0.24.1</summary>
+
+# Additions
+
+  - Factory Size Multiplier: Can be globally adjusted with respect to difficulty scaling. Recommended to leave as is if you don't wish to change dungeon size. Setting this number too big or too small may cause generation issues or delays. Tested values were from 0.5x to 25x, but may depend on interior and system specs.
+  - Starting time: Can adjust the starting time globally. This can also be adjusted with respect to difficulty scaling.
+  - Time Scaling: Can be adjusted to change how fast a day goes. This can be adjusted with respect to difficulty scaling.
+
+</details>
+<details>
+  <summary>0.24.0</summary>
+
+# Additions
+
+  - Ability to suppress get method, prefab, Enum warnings from the game. On second run of 0.24.0, will apply it automatically to true.
+
+# Changes
+
+  - Enable extra loggings was moved to [Debugging] instead of [General].
+
+# Fixes
+
+  - A softlock involving null items should no longer occur
+  - Fixed a way items and enemies were instanced
+
+</details>
+
+<details>
+  <summary>0.23.10</summary>
+
+# Additions
+
+  - Scrap amount and value caps
+
+</details>
+<details>
+  <summary>0.23.9</summary>
+
+# Fixes
+
+  - Fixed code to work with ShipInventory 1.2.6 and ShipInventoryUpdated.
+
+</details>
+<details>
+  <summary>0.23.8</summary>
+  
+## Added
+
+  - Added HotBarHassle and HotBarMania events (Thanks Zehs for the help here!)
+  - Several code optimizations (Thanks Zehs for the help here!)
+
+## Changes
+
+  - = Asset Bundles are now outside of the dll. Makes easier to use.
+
+</details>
+<details>
+  <summary>0.23.7</summary>
+  
+## Changes
+
+  - VeryLateShip has been configured to use the same time speed as "Hell" event. As well as not being dependant on scaling like some of the other time functions. **For this to be turned off, you can go into the CoreProperites and disable the Time Adjustment in Event Features Category** (I may move this into the specific events themselves in the future is possible).
+
+</details>
+<details>
+  <summary>0.23.6</summary>
+
+Also, forgot to link previous update but if you want the Goku event: https://github.com/TheSoftDiamond/BCMER_CustomEvents/blob/main/Goku.json
+
+## Changes
+
+  - Apparently in my state of low sleep, I had forgot to unregister HotBarHassle and HotBarMania.
+
+</details>
+<details>
+  <summary>0.23.5</summary>
+
+I've been working on a website for the mod, which you can find at https://bcmer.softdiamond.net/ so this update has been a bit delayed.
+
+## Additions
+
+  - Sanitization of Event Names (Spaces, etc would cause softlocks/crashes)
+
+## Changes
+
+  - Skull Enemy had wrong dependency for it.
+  - Adjusted weight of GiantsOutside event
+
+## Removed
+
+  - **Removed GokuBracken event**. You can find its custom event json here:
+  - Removed a couple of events that are no longer part of the mod.
+  - *Removed a few other events that had no obvious mod dependency or source as to what mod they were from. Some of which were deprecated events or removed from the event registry from BCME(R) itself. If anyone knows the source of these mods, feel free to contact me.*
+
+Note: HotBarMania and HotBarHassle were going to be a part of this version, but due to issues and finetuning required, I will be pushing it back to a future build.
+
+</details>
+
+<details>
+  <summary>0.23.4</summary>
+
+## Additions
+
+  - Added [Neutral] Needy Cats Event
+
+## Changes
+
+  - Added more Gold Scrap to the LCGoldScrap Event.
+  - Optimized code so that duplicate events should not occur
+  - Fixed Custom Events AGAIN (Hopefully the last time)
+
+</details>
+<details>
+  <summary>0.23.3</summary>
+
+## Additions
+
+  - Extra Logging. Useful for debugging purposes and more. Defaults to off in config.
+
+## Changes
+
+  - Due to broken Barber behavior from events, the Barber event has been removed again.
+
+</details>
+<details>
+  <summary>0.23.2</summary>
+
+## Changes
+
+  - Bug fixes regarding Custom Events. (For more context, the changes in 0.23.1 were not reliably working as expected, so this hopefully should be the last time I need to deal with this issue!). If you encounter issues, try deleting the CustomEvents.cfg file and see if that fixes the issue(s).
+
+</details>
+<details>
+  <summary>0.23.1</summary>
+
+## Changes
+
+  - The CustomEvent.cfg error should be fixed
+ 
+</details>
+<details>
+  <summary>0.23.0</summary>
+
+## Additions
+
+  - Custom Event Support. See [here](https://github.com/TheSoftDiamond/BrutalCompanyMinusExtraReborn/blob/main/CustomEventDocumentation.md) for info on how custom events supports work.
+
+## Changes
+
+  - Fixed some events referring to wrong dependency by accident.
+ 
+</details>
+<details>
+  <summary>0.22.1</summary>
+
+## Additions
+
+   - Player scaling difficulty. See readme for more info. This should support mods that expand player lobbies by default.
+   - Lethal Playtime Events were added. Critters, PlaytimeBig, ItsPlaytime.
+   - GiantsOutside. Basically GiantShowdown for those without the mod that adds more Giants.
+   - Two surfaced Events. Bellcrab, and Nemo.
+
+## Changes
+
+   - Dust pans were put under bad but are treated as slightly bad and rare.
+   - Reduced Amount of Tree spawns to half the amount. As well as their weight a bit.
+
+</details>
+<details>
+  <summary>0.22.0</summary>
+
+## Additions
+
+   - ShipInventory support for difficulty. (It should no longer softlock if the mod is not present)
+
+## Changes
+
+   - ScrapValue applies to more scrap. Bee Hives, Grabbable Turrets, Grabbable Landmines, Apparatice will properly scale with ScrapValue multiplier state. Thanks bmnr!
+   - TransmuteScrapBig.cs and TransmuteScrapSmall.cs will pick an item based on rarity instead of an at randomly picking them from list of items. For example, With LCGoldScrap mod, it kept picking gold scrap all the time, because there are a lot of scrap variations, though they're very rare.
+
+</details>
+<details>
+  <summary>0.21.10</summary>
+
+## Additions
+
+   - Nightmare Foxy Event
+
+## Changes
+
+   - Apparently Football Event pointed to wrong dependency
+
+</details>
+<details>
+  <summary>0.21.9</summary>
+
+## Additions
+
+   - SkullEnemy Event
+   - ManStalker Event
+
+## Changes
+
+   - Spawn cycle fix on Ignored Moons
+   - If Super Eclipse mod is present, the game should no longer roll ShipCoreFailure/LeverFailure Events
+
+</details>
+
+<details>
+  <summary>0.21.8</summary>
+
+## Changes
+
+   - Apparently the Bad Dice and regular Dice event was broken, but it has been fixed. If you previously have generated files from BCMER, you will need to either delete the Modded Events Config File, or manually change the MysteryDiceItem to GamblerItem for changes to reflect.
+
+</details>
+<details>
+  <summary>0.21.7</summary>
+
+## Additions
+
+   - You can blacklist moons from causing events, see the readme for more info.
+   - Multipliers for scrap amount and value based on Event Types active are added. *Thank you bmnr for the assistance there!*
+
+</details>
+<details>
+  <summary>0.21.6</summary>
+
+## Changes
+
+   - Temporarily removed support for ShipInventory due to softlock issue.
+
+</details>
+<details>
+  <summary>0.21.5</summary>
+
+## Additions
+
+   - Support for Cruiser and Ship Inventory in determining difficulty from scrap items present.
+
+## Changes
+
+   - Fixed some various typos
+
+</details>
+<details>
+  <summary>0.21.4</summary>
+
+## Additions
+
+   - Seamine
+   - Bertha
+   - YeetBomb
+
+## Changes
+
+   - Typos here and there on some stuff
+
+</details>
+<details>
+  <summary>0.21.3</summary>
+
+## Additions
+
+   - EasterEggs and MaskItem event. Don't trust your troll friends with this one!
+
+</details>
+<details>
+  <summary>0.21.2</summary>
+
+## Changes
+
+   - Apparently commenting those two lines BROKE everything. Well... bug fix update.
+
+</details>
+<details>
+  <summary>0.21.1</summary>
+
+## Additions
+
+   - Inverse Teleport Event (Very Bad -- TRUST ME)
+
+## Changes
+
+   - Asset Bundles are no longer accidentally packed with the .dll file
+
+</details>
+<details>
+  <summary>0.21.0</summary>
+
+## Changes
+
+   - The folder for configs is now in the BrutalCompanyMinusExtraReborn Directory, and as a result will generate new files in that directory for the mod to use. If you have any changes from the mod on previous versions in the config files, you may have to input data manually or drag your files from the old folder.
+
+</details>
+<details>
+  <summary>0.20.5</summary>
+
+## Added
+   - Shiba Event (Bad)
+   - Facility Meltdown (Very Bad)
+
+## Changes
+
+   - RGBShipLighting no longer occurs for the time being
+
+</details>
+<details>
+  <summary>0.20.4</summary>
+
+Mostly a bug fix update because I made some mistakes by accident in the previous version. You may need to delete your ModdedEvents.cfg file for the changes to the Baldi event to be present.
+
+## Changes
+
+   - Fixed some more missed typos from files
+   - Fixed a issue involving Baldi and MoaiEnemy Mod that could potentially cause the game to softlock or crash because of wrong variable referenced. oops!
+   - Baldi Event is no longer VeryBad, but Bad. (Compares to a Barber)
+
+</details>
+<details>
+  <summary>0.20.3</summary>
+
+## New
+
+   - Added Baldi Event
+
+## Changes
+
+   - Updated README
+   - Fixed changelog from previous version update
+
+</details>
+<details>
+  <summary>0.20.2</summary>
+
+## New
+
+   - Added Goku Bracken Event
+   - Added Moai Enemy Event
+
+## Changes
+
+   - Updated README
+
+</details>
+<details>
+  <summary>0.20.1</summary>
+
+## New
+
+   - Added VeryLateShip Event
+
+## Changes
+
+   - Tweaked some events a slight bit
+   - Updated README
+
+</details>
+<details>
+  <summary>0.20.0</summary>
+
+## New
+
+   - Added VeryEarlyShip Event
+
+## Changes
+
+   - Modified various event descriptions
+   - Some bug fixes
+   - Updated README (Some work still to do though)
+   - Begin development of BrutalCompanyMinusExtra Reborn
+
+</details>
+
+------------- BEGIN FORK ------------- 
+<details>
+  <summary>0.19.3</summary>
+
+## New
+
+   - Last update for this mod
+
+## Changes
+
+   - Updated README
+
+</details>
+<details>
+  <summary>0.19.2</summary>
+
+## New
+
+   - None
+
+## Changes
+
+   - Updated README
+
+</details>
+<details>
+  <summary>0.19.1</summary>
+
+## New
+
+   - Added Security feature to prevent players from using debug commands
+   - If debug commands get activated, the host will be alerted
+   - Added Lights Magenta command conversion to Lights Purple
+   - Added support for other modders to add their own events with their own extension mod
+
+## Changes
+
+   - Removed TakeyPlush and Zombies plush mods from dependencies list
+   - Removed ZombiesApocalypse event due to removal request from its owner
+   - Removed ZombiesPlush event due to mod conflict and will be moved to BCME - ExternalModule
+   - Removed TakeyGokuPlush event due to mod conflict and will be moved to BCME - ExternalModule
+   - Removed TakeyGokuPlushBig event due to mod conflict and will be moved to BCME - ExternalModule
+   - Removed StreamerEventsControl function due to streamer events being moved to BCME - ExternalModule
+   - Fixed Lights command desync
+   - Rewrote event registry, events should now generate in the right config file
+   - Fixed missing event entries in event registry(*for some reason all modded events werent registered*)
+   - Removed LethalModDataLib from dependencies list since its nolonger required
+
+</details>
+<details>
+  <summary>0.19.0</summary>
+   
+## WARNING! Deletele VanillaEvents.cfg and ModdedEvents.cfg so it can regenerate with new values, if you dont do that then fixes in "Changes" section wont work!
+ 
+
+## New
+
+ Theese events were possible to make thanks to help from [Zehs](https://thunderstore.io/c/lethal-company/p/Zehs/)
+   - Added (Good) TakeyGokuPlush event
+   - Added (Neutral+) TakeyGokuPlushBig event
+   - Added (Neutral) Clock event
+   - Added (Neutral-) SussyPaintings event
+   - Added (Neutral) Train event
+   - Added (Good) ZombiesPlush event
+   - Added description to "Lights" command
+   - Added description to "StreamerEvents info" command¨
+   - Added (VeryBad) Dweller event
+   - Added (Neutral--) ControlPads event
+   - Added (Good) ZedDog event
+   - Added (Neutral) PlasticCup event
+   - Added (Neutral--) ToiletPaper event
+   - Added (Neutral--) SoccerBall event
+   - Added (Neutral--) GarbageLid event
+   - Added (Bad) MeteorShower event
+
+## Changes
+
+   - Fixed MantiSlayers spawning inside in MantiSlayers event
+   - Fixed MantiToils spawning inside in MantiToils event
+   - Return of MantiToils event
+   - Return of NoMantiToils event
+   - Return of TurretsEverywhere event
+   - Adjusted Scale values is NutSlayers event
+   - NutSlayers now only spawn outside in NutSlayers event
+   - Adjusted Scale values in ZombieApocalypse event to make it less annoying
+
+## Known issues
+
+   - For some reason it is required that ZombiesPlush and TakeyPlush mods are present
+   - Added temporarily Zombies Plush and TakeyPlush mods as dependencies until issues are resolved
+
+</details>
+<details>
+  <summary>0.18.5</summary>
+   
+## New
+
+   - Rebuild the mod with v62 game files
+   - Added CrowdControl checks to disable events deemed as "incompatible"
+
+## Changes
+
+   - Decreased scrap value multiplier from 7 to 4.5 in NutSlayers event
+   - Changed door closing time from 10am to 3pm
+
+## Known issues
+
+   - None
+
+</details>
+<details>
+  <summary>0.18.4</summary>
+
+## Changes
+
+   - Removed code preventing the mod from loading
+
+</details>
+<details>
+  <summary>0.18.3</summary>
+   
+## New
+
+   - Added (Fun) RGBShipLights event as requested
+   - Implemented new function StreamerEventsControl that allows you to disable all streamer events without the need of restarting the game
+   - Added LethalModDataLib as dependency to make sure StreamerEventsControl is working properly
+
+## Changes
+
+   - Increased scrap value in NutSlayers event to make it "fair", also decreased NutSlayer enemy spawnrate
+   - Improved TerminalFailure event to completelly break the terminal instead of just preventing purchases
+   - Improved ShipLightsFailure event to kill the lights and disable the lightswitch instead of just disabling the lightswitch
+   - Fixed DoorCircuitFailure not spawning due to code oversight
+
+## Known issues
+
+   - Disabled Mantitoils event due to mantitoils spawning inside
+   - Disabled TurretsEverywhere event due to its relation with Mantitoils event
+   - Disabled NoMantitoils event due to its relation with Mantitoils event
+   - Disabled MaskedHorde event dut to it spawning mimics without the event being selected
+
+</details>
+<details>
+  <summary>0.18.0</summary>
+   
+   - Added (Extreme) NutSlayers
+   - Added (Bad) JetpackFailure, Note: Not sorry Takey <img src="https://imgur.com/u6zqX6q.png" width="50px"> 
+   - Added (Bad) FlashLigtsFailure
+   - Added GokuBracken dependency to make sure TakeyGokuBracken is only added when all essential mods are present
+   - Attempt fix for some of ToilHead related events calling Execute method regardless of the event not being added
+   - Attempt fix to prevent MantiToils from spawning inside
+   - Attempt fix for TerminalFailure not showing error message on the screen after attemping purchase
+   - Fixed code oversight that allowed TurretsEverywhere event to spawn regardless of ToilHead mod not being 
+     present and making the game stuck because of that
+   - Fixed ToilHead mod dependency list missing related events entries
+   - Updated README file
+
+</details>
+<details>
+  <summary>0.17.16</summary>
+   
+   - *DATA REMOVED*
+
+</details>
+<details>
+  <summary>0.17.15</summary>
+   
+   - Added (VeryBad)DoorCircuitFailure event
+   - Added (Bad) TargetingFailure event
+   - Added v55 compatibility, but be warned there still might be undiscovered bugs
+
+## Warning
+
+   - As of v55 all mod integrations are deemed incompatible, 
+   i recommend that u do your own research on what works and what doesnt, 
+   as soon as the mods are updated for v55, i will test them and fix a few things if required
+
+</details>
+<details>
+  <summary>0.17.10</summary>
+   
+   - Fixed minor issue
+
+</details>
+<details>
+  <summary>0.17.9</summary>
+   
+   - Added(Good)DoorOverdrive event
+   - Added(Bad)TakeyGokuBracken event  
+   - Added personal library file (Essential for the mod to work)
+   - *missing changelog entry*
+   - <img src="https://i.imgur.com/6TWu85g.gif" width="50px">
+   - Added TerminalAPI dependency in order to improve TerminalFailure event functionality
+   - EmergencyDice mod is unsupported, 
+   so if any events regarding this mod will break i will not fix them and probably just remove them
+   
+   Note: Make sure to delete "VanillaEvents" so it regenerates
+
+## Known issues
+   - Event Crazy is not working at all
+   - Sometimes manticoils spawn inside the facility without an event involving them
+</details>
+<details>
+  <summary>0.17.4-Emergency patch</summary>
+   
+   - Rewrote the code of events added in 1.16.9
+   - Fixed code issue where effects of the events would only apply to the host
+   - Added(Very Bad) ToilSlayer event
+   - Fixed ZombieApocalypse event to not trigger that often
+   - Changed ZombieApocalypse category from Extreme to Very Bad
+   - Reduced the chance of streamer special events so they are rare Note: This was requested
+   - Updated API references for ZombieApocalypse, ToilHeads and MantiToils
+   - Added(Very Bad) MantiSlayer event
+   - Added(Very Bad) AllSlayers event
+   - Added(Remove) NoToilSlayer event
+   - Added(Remove) NoMantiSlayer event
+   - Added(Remove) NoSlayers event
+   - Added LethalNetworkAPI dependency *This enry was added later*
+
+Note: *NO DATA* is a reference to an unscheduled update
+
+</details>
+<details>
+  <summary>0.16.9</summary>
+
+   - NO DATA
+
+</details>
+<details>
+  <summary>0.15.3</summary>
+
+   - Added (Bad)TurretsEverywhere event
+   - Added (Bad)Lasso event(NonShippingAuthorisation required for the event to occur)
+   - Reduced Dust pan item spawn rate in Dust pans event
+   - Added (Even worse then Very Bad)ZombieApocalypse
+   - Changed WelcomeToTheFactory category event from Neutral to Bad
+   - Removed unwanted code from NoMantitoils event
+
+</details>
+<details>
+  <summary>0.14.2</summary>
+
+   - Fixed NoMantiToils event with the help of Zehs <3
+   - Added (Neutral)WelcomeToTheFactory event
+   - Added (Neutral)DustPans event
+   - Added (Very Bad)MaskedHorde event
+   - Slightlly increased spawn weight of specific events to make sure they are not super rare
+
+</details>
+<details>
+  <summary>0.13.7</summary>
+
+   - Added TakeyPlush integration
+   - Added (Good)TakeyPlush event
+   - Added (Very Bad)MantiToil event
+   - Added (Remove)NoMantiToil event
+   - Added (Very Bad)Doors event
+
+</details>

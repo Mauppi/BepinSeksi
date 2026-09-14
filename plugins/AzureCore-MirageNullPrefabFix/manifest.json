@@ -1,0 +1,10 @@
+{
+  "name": "MirageNullPrefabFix",
+  "version_number": "1.0.2",
+  "website_url": "https://github.com/Azure0219/MirageNullPrefabFix",
+  "description": "Companion hotfix: stops Mirage's StartOfRound NullReferenceException on v81 when other mods leave null NetworkPrefab entries. Loads alongside Mirage.",
+  "dependencies": [
+    "BepInEx-BepInExPack-5.4.2100",
+    "qwbarch-Mirage-1.29.1"
+  ]
+}

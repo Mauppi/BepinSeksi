@@ -1,0 +1,9 @@
+{
+  "name": "BrutalCompanyMinusExtraReborn",
+  "version_number": "2.0.1",
+  "website_url": "https://github.com/TheSoftDiamond/BrutalCompanyMinusExtraReborn",
+  "description": "V81+ Continued Fork of BrutalCompanyMinusExtra. More Events, Mod Integrations, and Chaos! Also an API too!",
+  "dependencies": [
+    "BepInEx-BepInExPack-5.4.2305"
+  ]
+}

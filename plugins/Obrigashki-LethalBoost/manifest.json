@@ -1,0 +1,9 @@
+{
+  "name": "LethalBoost",
+  "version_number": "1.0.0",
+  "website_url": "",
+  "description": "Comprehensive performance optimization mod with LOD systems, AI throttling, and graphics optimizations. Significantly improves FPS through intelligent distance-based culling.",
+  "dependencies": [
+    "BepInEx-BepInExPack-5.4.2100"
+  ]
+}

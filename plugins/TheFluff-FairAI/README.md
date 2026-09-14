@@ -1,0 +1,3 @@
+Mines and Boombas(From LethalThings) will now trigger on any enemy stepping on them. Now Turrets will also target and kill enemies too. Also including a config that will generate after hosting a lobby. This config will then let you set which enemies can set off mines, and boombas. Also can config what is killable and targetable by turrets(All enemies can by default for all options). You can now config to check for players inside the dungeon before allowing enemies to be damaged by all things included in this mod.
+
+Also please if you like the mod maybe drop me a 1$ donation or something. Just lost my job so this will help with motivation.

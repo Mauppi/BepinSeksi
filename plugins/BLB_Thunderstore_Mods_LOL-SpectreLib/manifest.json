@@ -1,0 +1,9 @@
+{
+    "name": "SpectreLib",
+    "version_number": "1.2.1",
+    "website_url": "",
+    "description": "Library made by Boom for Vanilla Variant enthusiasts.",
+    "dependencies": [
+		"BepInEx-BepInExPack-5.4.2100"
+	]
+}

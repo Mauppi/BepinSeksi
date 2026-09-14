@@ -1,0 +1,9 @@
+{
+    "name": "SpeechRecognitionAPI",
+    "version_number": "1.0.0",
+    "website_url": "https://github.com/03-JS/SpeechRecognitionAPI",
+    "description": "Vosk based automatic speech recognition API for Lethal Company. Allows for real time transcription and voice commands",
+    "dependencies": [
+        
+    ]
+}

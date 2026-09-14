@@ -1,0 +1,9 @@
+{
+  "name": "ReverbTriggerFix",
+  "version_number": "0.4.0",
+  "website_url": "https://www.youtube.com/@Jacob-DT",
+  "description": "Attempts to improve performance with AudioReverbTriggers",
+  "dependencies": [
+    "BepInEx-BepInExPack-5.4.2100"
+  ]
+}

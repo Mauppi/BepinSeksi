@@ -1,0 +1,43 @@
+# Preserve installed files byte-for-byte, including config line endings.
+* -text
+
+# Compiled mods, native libraries, and their debugging/build data.
+*.dll filter=lfs diff=lfs merge=lfs -text
+*.pdb filter=lfs diff=lfs merge=lfs -text
+*.lib filter=lfs diff=lfs merge=lfs -text
+*.data filter=lfs diff=lfs merge=lfs -text
+
+# Unity asset bundles (including future mod updates).
+*.lethalbundle filter=lfs diff=lfs merge=lfs -text
+*.weatherbundle filter=lfs diff=lfs merge=lfs -text
+*.assetbundle filter=lfs diff=lfs merge=lfs -text
+*.bundle filter=lfs diff=lfs merge=lfs -text
+*.unity3d filter=lfs diff=lfs merge=lfs -text
+*.duskmod filter=lfs diff=lfs merge=lfs -text
+
+# Speech recognition and voice activity model binaries.
+*.onnx filter=lfs diff=lfs merge=lfs -text
+*.jit filter=lfs diff=lfs merge=lfs -text
+*.fst filter=lfs diff=lfs merge=lfs -text
+*.mdl filter=lfs diff=lfs merge=lfs -text
+*.ie filter=lfs diff=lfs merge=lfs -text
+*.dubm filter=lfs diff=lfs merge=lfs -text
+*.mat filter=lfs diff=lfs merge=lfs -text
+*.stats filter=lfs diff=lfs merge=lfs -text
+
+# These installed Unity bundles do not have filename extensions.
+plugins/AuroraBytes-Scopophobia/scp096 filter=lfs diff=lfs merge=lfs -text
+plugins/BLB_Thunderstore_Mods_LOL-Boom_Variants/Assets/gravelingbundle filter=lfs diff=lfs merge=lfs -text
+plugins/Entity378-BuyableShotgunPlus/BuyableShotgunPlus/shotgun filter=lfs diff=lfs merge=lfs -text
+plugins/Evaisa-LethalLib/LethalLib/lethallib filter=lfs diff=lfs merge=lfs -text
+plugins/Hamm3rhart-GamblingMachineAtTheCompanyForkV2/gamblingmachinebundle filter=lfs diff=lfs merge=lfs -text
+plugins/mrgrm7-LethalCasino/lethalcasinoassets filter=lfs diff=lfs merge=lfs -text
+plugins/Rune580-LethalCompany_InputUtils/LethalCompanyInputUtils/AssetBundles/** filter=lfs diff=lfs merge=lfs -text
+plugins/SoftDiamond-BrutalCompanyMinusExtraReborn/bcm_customassets filter=lfs diff=lfs merge=lfs -text
+plugins/SoftDiamond-BrutalCompanyMinusExtraReborn/bcm_assets filter=lfs diff=lfs merge=lfs -text
+plugins/SoftDiamond-BrutalCompanyMinusExtraReborn/bcmer_assets filter=lfs diff=lfs merge=lfs -text
+plugins/TeamXiaolan-DawnLib/DawnLib/Assets/** filter=lfs diff=lfs merge=lfs -text
+plugins/TRizzle-LethalBots/TRizzle-LethalBot/ship_orbit_navmesh filter=lfs diff=lfs merge=lfs -text
+plugins/TRizzle-LethalBots/TRizzle-LethalBot/lethalbotnpcmodassets filter=lfs diff=lfs merge=lfs -text
+"plugins/TRizzle-LethalBotsNavMeshProject/TRizzle-LethalBots NavMesh Project/lethalbotsnavmesh" filter=lfs diff=lfs merge=lfs -text
+plugins/TRizzle-NavMeshInCompanyRedux/TRizzle-NavMeshInCompanyRedux/companybuildingnavmesh filter=lfs diff=lfs merge=lfs -text

@@ -1,0 +1,10 @@
+{
+    "name": "Casino_v81_Patch",
+    "version_number": "1.0.0",
+	"website_url": "",
+    "description": "Fix for lethal casino v81",
+    "dependencies": [
+        "BepInEx-BepInExPack-5.4.2100",
+        "mrgrm7-LethalCasino-1.1.3"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Rapture_Weather",
+    "version_number": "1.0.1",
+    "website_url": "https://github.com/GenericGMD/Generic-Moons",
+    "description": "Adds in the ability to get raptured.",
+    "dependencies": [
+        "mrov-WeatherRegistry-0.7.0",
+        "JacobG5-JLL-1.9.8",
+        "BepInEx-BepInExPack-5.4.2100"
+    ]
+}

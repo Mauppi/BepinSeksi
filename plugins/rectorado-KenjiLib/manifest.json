@@ -1,0 +1,9 @@
+{
+  "name": "KenjiLib",
+  "version_number": "0.7.1",
+  "website_url": "https://discord.com/channels/1168655651455639582/1392978985872261220",
+  "description": "The tiniest collection of scripts I'll use in my projects",
+  "dependencies": [
+    "BepInEx-BepInExPack-5.4.2100"
+  ]
+}
