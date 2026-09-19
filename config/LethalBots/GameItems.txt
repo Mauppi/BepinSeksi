@@ -102,6 +102,8 @@ Name: DrabHoney with ID: 0
 Name: Blunderbuss with ID: 0
 Name: Cereal Box with ID: 0
 Name: DrDanielsCan with ID: 0
+Name: Glass Canon with ID: 0
+Name: Glass Shell with ID: 0
 Name: Grant with ID: 0
 Name: Ice Core with ID: 0
 Name: Barrel with ID: 0
@@ -128,6 +130,7 @@ Name: Heart Locket with ID: 0
 Name: Honey Flask with ID: 0
 Name: Hourglass with ID: 0
 Name: Hydrogen Tank with ID: 0
+Name: Gasoline Tank with ID: 0
 Name: Idol with ID: 0
 Name: Manor Lantern with ID: 0
 Name: Sledgehammer with ID: 0
@@ -177,7 +180,7 @@ Name: Garden-Shell with ID: 0
 Name: Medium Gear with ID: 0
 Name: GIB-CANON with ID: 0
 Name: Gizmo with ID: 0
-Name: Copper Sheet with ID: 0
+Name: Gold Sheet with ID: 0
 Name: Grenade Launcher with ID: 0
 Name: Hand Grenade with ID: 0
 Name: Italian-Mask with ID: 0
@@ -188,6 +191,7 @@ Name: Nosle with ID: 0
 Name: Package with ID: 0
 Name: Paint Bucket with ID: 0
 Name: Frying Pan with ID: 0
+Name: P-Engine with ID: 0
 Name: Large Pizzabox with ID: 0
 Name: Electric Drill with ID: 0
 Name: R-Engine with ID: 0
@@ -204,6 +208,7 @@ Name: Gibson with ID: 0
 Name: Guardian Laser with ID: 0
 Name: Jet Wings with ID: 0
 Name: Kevin with ID: 0
+Name: Frost Egg with ID: 0
 Name: Pink soda with ID: 0
 Name: Present with ID: 0
 Name: Prickle Cherry with ID: 0
@@ -215,6 +220,7 @@ Name: Tazer Gun with ID: 0
 Name: Tea cup with ID: 0
 Name: Toaster with ID: 0
 Name: Umbrella with ID: 0
+Name: Small Egg with ID: 0
 Name: Energy Pack with ID: 0
 Name: Vindium Tube with ID: 0
 Name: Watering Can with ID: 0
