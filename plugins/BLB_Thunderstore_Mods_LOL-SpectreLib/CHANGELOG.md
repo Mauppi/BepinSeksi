@@ -1,3 +1,27 @@
+## 1.2.52 zefzegrergqssegrsehtrsethshert
+
+## 1.2.5 - Glass
+
+* Added functionalities to SharkyAI.
+* Added functionalities to GuardianAI.
+* Added functionalities to PumpGunItem.
+* Added functionalities to MaskedAI.
+* Added functionalities to GravelingBloomAI.
+
+## 1.2.4 - a
+
+* A
+
+## 1.2.3
+
+* Tweaked some behaviour in SRT item.
+* Fixed desync on Plant Reaper script.
+* Fixed some desyncs on GuardianAI.
+
+## 1.2.2
+
+* Changes to GuardianAI.
+
 ## 1.2.1
 
 * Tweaked behaviour on enemies :

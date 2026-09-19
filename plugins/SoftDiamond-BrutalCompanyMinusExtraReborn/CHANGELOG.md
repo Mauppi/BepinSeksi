@@ -2,6 +2,21 @@
 
 <details>
 
+  <summary>2.1.0</summary>
+
+# Additions
+ - Additive, scrap amount and scrap value support for WeatherRegistry weathers. Custom weather should work like Brutal.
+
+# Fixes
+ - A red wall of text caused by me not filtering for certain items.
+
+# Changes
+ - Weather additives settings were moved to their respective weather settings. Used to be on the difficulty settings.
+
+</details>
+
+<details>
+
   <summary>2.0.1</summary>
 
 # Additions

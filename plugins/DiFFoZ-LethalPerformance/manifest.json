@@ -1,6 +1,6 @@
 {
     "name": "LethalPerformance",
-    "version_number": "1.3.0",
+    "version_number": "1.4.3",
     "website_url": "https://github.com/DiFFoZ/LethalPerformance",
     "description": "Optimizes the game by caching frequently searchable components",
     "dependencies":

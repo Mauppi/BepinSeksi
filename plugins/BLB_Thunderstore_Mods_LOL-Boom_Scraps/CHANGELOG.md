@@ -1,3 +1,15 @@
+#### 2.7.7 Jean Révolution
+
+* Ajouté des variantes de materiel sur la bouteille de sauce.
+* Réglé le Bidon d'Huile.
+
+#### 2.7.6 Dominique François 2nd
+
+* Ajouté plusieurs objets de valeur.
+* Retiré Carps.
+* Réglé l'erreur du son d'attérissage de Gisbon.
+* Optimizé le Super Outil de Radar.
+
 #### 2.7.5 A
 
 * Added the Super Radar system (SRM Ship Upgrade and SRT item) available for you in the shop.

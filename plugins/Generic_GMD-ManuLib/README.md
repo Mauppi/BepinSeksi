@@ -35,6 +35,10 @@ Me: Coded like everything.
 
 Teserex: Awesome icon and local boyfriend.
 
+Pacoito: Handheld me through some of my stupidness and wrote a couple of helpful changes so less problems would happen.
+
+Wesley: Attempted to help make a script that I didn't use. Sorry.
+
 JacobG5: Awesome help with the Run on Host script. And by help I mean he grabbed my hands and guided them on the keyboard.
 
 Kenji: ManuLib banner and minor testing.

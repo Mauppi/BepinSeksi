@@ -1,6 +1,6 @@
 {
     "name": "HarmonyXTranspilerFix",
-    "version_number": "1.1.0",
+    "version_number": "1.4.0",
     "website_url": "https://github.com/DiFFoZ/",
     "description": "Fixes HarmonyX Transpiler cause patched method to behave incorrectly",
     "dependencies":

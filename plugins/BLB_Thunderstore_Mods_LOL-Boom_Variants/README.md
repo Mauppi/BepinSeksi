@@ -1,8 +1,25 @@
 # Boom Variants
 
-VR SUPPORT (stfu jon)
+VR SUPPORTED (stfu jon)
 
-Adds more than 50 variants :
+## Description :
+
+This mod adds Enemy Variants to the game (NOT ENEMY SKINS)
+these variants have variable changes/entirely new mechanics to them
+that makes them 100x more fun to fight (or not).
+
+### A fair warning :
+This mod contains :
+~300MB worth of content
+Gore (non-photorealistic/same as vanilla)
+Possible weird occurances with respawning mechanics added by others mods.
+Arachnophobia mode for all Bunker Spider variants (so that all the highly arachnophobic people can relax)
+Unused variants (variants either WIP and published too early, or straight up not intended for serious use)
+
+
+## Contents :
+
+Adds more than 80 variants :
 
 
 
@@ -36,13 +53,13 @@ Adds more than 50 variants :
 
 
 
-* Steel Soldier (Nutcracker Variant)
+* Steel Soldier (Nutcracker Variant - Removed)
 
 <a href="https://ibb.co/mC08hPGr"><img src="https://i.ibb.co/6R8BDqmc/Steel-Soldier.png" alt="Steel Soldier" border="0"></a>
 
 
 
-* Silver Soldier (Nutcracker Variant)
+* Silver Soldier (Nutcracker Variant - Removed)
 
 <a href="https://ibb.co/GSbzWj3"><img src="https://i.ibb.co/trWVq5P/Silver-Soldier.png" alt="Silver Soldier" border="0"></a>
 

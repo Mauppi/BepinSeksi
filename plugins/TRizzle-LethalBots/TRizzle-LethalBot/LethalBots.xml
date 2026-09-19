@@ -2741,7 +2741,7 @@
         </member>
         <member name="M:LethalBots.AI.LethalBotAI.GrabObject(GrabbableObject)">
             <summary>
-            Carbon Copy of <see cref="M:GameNetcodeStuff.PlayerControllerB.BeginGrabObject"/>, but made for bots
+            Requests a server-arbitrated pickup without speculatively changing item ownership or weight.
             </summary>
             <param name="grabbableObject"></param>
         </member>
@@ -2820,12 +2820,6 @@
             <summary>
             Copied from <c>PlayerControllerB</c>, tells the bot to swap to the specified slot 
             </summary>
-        </member>
-        <member name="M:LethalBots.AI.LethalBotAI.GrabAnimationCoroutine">
-            <summary>
-            Coroutine for the grab animation
-            </summary>
-            <returns></returns>
         </member>
         <member name="M:LethalBots.AI.LethalBotAI.SetSpecialGrabAnimationBool(System.Boolean,GrabbableObject)">
             <summary>
@@ -3367,6 +3361,9 @@
             </summary>
             <param name="grabbableObject">The object to check</param>
             <returns>true: this object in in our loadout; otherwise false</returns>
+        </member>
+        <member name="T:LethalBots.AI.LethalBotNavigationWorkBudget">
+            <summary>Bounds aggregate route work across bots, rather than multiplying a per-bot cap.</summary>
         </member>
         <member name="T:LethalBots.AI.LethalBotPlayerDefenseEvidence">
             <summary>Physical evidence from actual damage; dialogue cannot manufacture these hits.</summary>

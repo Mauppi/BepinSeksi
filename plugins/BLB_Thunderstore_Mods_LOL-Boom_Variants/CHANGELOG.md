@@ -1,3 +1,26 @@
+#### 1.9.5
+
+* Added Varnish Bird.
+* Added Ghost Sheriff.
+* Added Glass Masked.
+* Added Carnage Bloom.
+* Overhauled Seedhead.
+* Balancing on Nutcracker Variants (shoot time, damages, Kick damages, and more.)
+
+#### 1.9.4 Birn
+
+* Birn
+
+#### 1.9.3 Artillery Part 1
+
+* Tweaked steps on SuperMech.
+* Some other things...
+
+#### 1.9.2 BURST
+
+* Nutcracker variant balancing.
+* Removed Steel Soldier, Silver Soldier, Carpse Soldier, and Dark Soldier.
+
 #### 1.9.1 Maman au téléphone qui clc
 
 * Crasher missiles now use the Hoaming type instead of Heavy.

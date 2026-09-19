@@ -1,6 +1,6 @@
 {
     "name": "Boom_Variants",
-    "version_number": "1.9.1",
+    "version_number": "1.9.51",
     "website_url": "",
     "description": "[V81] Adds in 80+ variants of vanilla enemies into the game",
     "dependencies": [
@@ -10,7 +10,7 @@
 		"pacoito-itolib-0.9.3",
 		"JacobG5-JLL-1.9.10",
 		"IAmBatby-LethalLevelLoader-1.7.0",
-		"BLB_Thunderstore_Mods_LOL-SpectreLib-1.2.1",
+		"BLB_Thunderstore_Mods_LOL-SpectreLib-1.2.52",
 		"TeamXiaolan-DawnLib-0.9.10"
 	]
 }
