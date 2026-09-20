@@ -1,0 +1,15 @@
+{
+    "name": "Infernis",
+    "version_number": "7.0.0",
+    "website_url": "",
+    "description": "Infernis is a new volcanic moon.",
+    "dependencies": [
+        "IAmBatby-LethalLevelLoader-1.7.12",
+        "JacobG5-JLL-1.10.1",
+        "BepInEx-BepInExPack-5.4.2100",
+        "AudioKnight-StarlancerAIFix-3.13.2",
+        "Hardy-LCMaxSoundsFix-1.2.0",
+        "Magic_Wesley-CustomStoryLogsFixed-1.6.1",
+        "Magic_Wesley-Wesleys_Shenanigans-1.0.0"
+    ]
+}

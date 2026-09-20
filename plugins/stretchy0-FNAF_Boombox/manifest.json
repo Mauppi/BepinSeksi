@@ -1,0 +1,9 @@
+{
+    "name": "FNAF_Boombox",
+    "version_number": "1.0.0",
+    "website_url": "",
+    "description": "Four FNAF Songs",
+    "dependencies": [
+      "CodeEnder-Custom_Boombox_Fix-1.2.1"
+    ]
+}
