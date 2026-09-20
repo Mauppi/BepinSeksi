@@ -235,6 +235,22 @@ Name: Military shotgun with ID: 0
 Name: Plastic canister with ID: 0
 Name: Single shotgun with ID: 0
 Name: Fuse with ID: 0
+Name: Amethyst cluster with ID: 0
+Name: Gold coin with ID: 0
+Name: Burnt note 1 with ID: 0
+Name: Burnt note 2 with ID: 0
+Name: Burnt note 3 with ID: 0
+Name: Burnt note 4 with ID: 0
+Name: Concrete block with ID: 0
+Name: Cunningham's travel log 1 with ID: 0
+Name: Flintlock with ID: 0
+Name: Lava crystal with ID: 0
+Name: Oil lantern with ID: 0
+Name: Oil shale with ID: 0
+Name: Pickaxe with ID: 0
+Name: Raw gold with ID: 0
+Name: Rock with ID: 0
+Name: Skull with ID: 0
 Name: The awesome doohickey blaster with ID: 0
 Name: Elevator key with ID: 0
 Name: ShyGuyPainting with ID: 0

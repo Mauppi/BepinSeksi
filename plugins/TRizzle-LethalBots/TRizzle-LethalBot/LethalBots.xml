@@ -1176,14 +1176,6 @@
             Changes back to the previous state
             </summary>
         </member>
-        <member name="M:LethalBots.AI.AIStates.PlayerInCruiserState.DoAI">
-            <summary>
-            <inheritdoc cref="M:LethalBots.AI.AIState.DoAI"/>
-            </summary>
-        </member>
-        <member name="M:LethalBots.AI.AIStates.PlayerInCruiserState.RegisterSignalTranslatorCommands">
-            <inheritdoc cref="M:LethalBots.AI.AIState.RegisterSignalTranslatorCommands"/>
-        </member>
         <member name="T:LethalBots.AI.AIStates.RescueAndReviveState.ReviveMethod">
             <summary>
             Specifies how the bot will attempt to revive this player.
@@ -1495,6 +1487,42 @@
             We return null if we are not outside or our target entrance is null!
             </remarks>
             <inheritdoc cref="M:LethalBots.AI.AIState.GetDesiredSafePathPosition"></inheritdoc>
+        </member>
+        <member name="M:LethalBots.AI.AIStates.UseCruiserState.DoAI">
+            <summary>
+            <inheritdoc cref="M:LethalBots.AI.AIState.DoAI"/>
+            </summary>
+        </member>
+        <member name="M:LethalBots.AI.AIStates.UseCruiserState.RegisterChatCommands">
+            <inheritdoc cref="M:LethalBots.AI.AIState.RegisterChatCommands"/>
+        </member>
+        <member name="M:LethalBots.AI.AIStates.UseCruiserState.RegisterSignalTranslatorCommands">
+            <inheritdoc cref="M:LethalBots.AI.AIState.RegisterSignalTranslatorCommands"/>
+        </member>
+        <member name="M:LethalBots.AI.AIStates.UseCruiserState.IsPossible(VehicleController,LethalBots.AI.LethalBotAI)">
+            <summary>
+            Do we have the right conditions to start this state.
+            </summary>
+            <param name="vehicle">The vehicle the bot wants to use</param>
+            <param name="lethalBotAI">The bot</param>
+            <returns><see langword="true"/> the bot can use <paramref name="vehicle"/>; otherwise <see langword="false"/></returns>
+        </member>
+        <member name="M:LethalBots.AI.AIStates.UseCruiserState.IsDrivingCruiser">
+            <summary>
+            Is the bot driving the cruiser
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LethalBots.AI.AIStates.UseCruiserState.IsInteractingWithCruiser">
+            <summary>
+            Is the bot interacting with the cruiser
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LethalBots.AI.AIStates.UseCruiserState.SelectPassengerSeat">
+            <summary>
+            Used by the bot to find a seat to sit in
+            </summary>
         </member>
         <member name="T:LethalBots.AI.AIStates.UseInverseTeleporterState">
             <summary>
@@ -3764,11 +3792,12 @@
             Update the head of the bot to look at what he is set to
             </summary>
         </member>
-        <member name="M:LethalBots.AI.NpcController.OrderToGoUpDownLadder(System.Boolean)">
+        <member name="M:LethalBots.AI.NpcController.OrderToGoUpDownLadder(System.Boolean,System.Nullable{UnityEngine.Vector3})">
             <summary>
             Set the controller to go down or up on the ladder
             </summary>
             <param name="hasToGoDown"></param>
+            <param name="ladderEnd"></param>
         </member>
         <member name="M:LethalBots.AI.NpcController.CanUseLadder(InteractTrigger)">
             <summary>
@@ -3857,6 +3886,11 @@
             Enumeration of how bots will follow a player
             </summary>
         </member>
+        <member name="T:LethalBots.Enums.EnumLastSyncedPhysicsType">
+            <summary>
+            Helper enum for the bot's Physics parent state
+            </summary>
+        </member>
         <member name="T:LethalBots.Enums.EnumObjectsLookingAt">
             <summary>
             Enumeration for setting the bot to look at a target
@@ -3875,6 +3909,11 @@
         <member name="T:LethalBots.Enums.EnumTerminalStates">
             <summary>
             Enumeration for the different terminal state, for navigating in the menu LethalBot on the terminal
+            </summary>
+        </member>
+        <member name="T:LethalBots.Enums.EnumVoicePriority">
+            <summary>
+            Enumeration of the prioritys for <see cref="P:LethalBots.AI.PlayVoiceParameters.VoicePriority"/>
             </summary>
         </member>
         <member name="M:LethalBots.Managers.AudioManager.LoadAllPaths(System.String)">
@@ -5623,6 +5662,80 @@
             <param name="text"></param>
             <returns></returns>
         </member>
+        <member name="T:LethalBots.Managers.VehicleManager">
+            <summary>
+            The main manager for handling vehicles for the bots in the game.
+            </summary>
+        </member>
+        <member name="F:LethalBots.Managers.VehicleManager.RegisterVehicles">
+            <summary>
+            A hook that is called after <see cref="T:LethalBots.Managers.VehicleManager"/> registers the default vehicles
+            </summary>
+        </member>
+        <member name="M:LethalBots.Managers.VehicleManager.RegisterVehicle``2(LethalBots.Utils.Helpers.VehicleAdapter{``0,``1})">
+            <summary>
+            Registers a new vehicle for Lethal Bots to use
+            </summary>
+            <typeparam name="TVehicle"></typeparam>
+            <typeparam name="TGearRequest"></typeparam>
+            <param name="vehicleAdapter"></param>
+        </member>
+        <member name="M:LethalBots.Managers.VehicleManager.RegisterVehicle(System.Type,LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter)">
+            <summary>
+            Registers a new vehicle for Lethal Bots to use
+            </summary>
+            <param name="vehicleType"></param>
+            <param name="vehicleAdapter"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:LethalBots.Managers.VehicleManager.GetVehicleInfo``2">
+            <summary>
+            Gets the info for the following <typeparamref name="TVehicle"/>
+            </summary>
+            <typeparam name="TVehicle"></typeparam>
+            <typeparam name="TGearRequest"></typeparam>
+            <returns>The <see cref="T:LethalBots.Utils.Helpers.VehicleAdapter`2"/> associated with the given <typeparamref name="TVehicle"/> or null</returns>
+        </member>
+        <member name="M:LethalBots.Managers.VehicleManager.GetVehicleInfo(VehicleController)">
+            <summary>
+            Gets the info for the following <paramref name="vehicleController"/>
+            </summary>
+            <param name="vehicleController"></param>
+            <returns>The <see cref="T:LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter"/> associated with the given <paramref name="vehicleController"/> or null</returns>
+        </member>
+        <member name="M:LethalBots.Managers.VehicleManager.GetVehicleInfo(System.Type)">
+            <summary>
+            Gets the info for the following <paramref name="vehicleType"/>
+            </summary>
+            <param name="vehicleType"></param>
+            <returns>The <see cref="T:LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter"/> associated with the given <paramref name="vehicleType"/> or null</returns>
+        </member>
+        <member name="M:LethalBots.Managers.VehicleManager.TryGetVehicleInfo(System.Type,LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter@)">
+            <summary>
+            Gets the info for the following <paramref name="vehicleType"/>
+            </summary>
+            <param name="vehicleType">The vehicle type to get the info for.</param>
+            <param name="vehicleInfo">The <see cref="T:LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter"/> associated with the given <paramref name="vehicleType"/> or null</param>
+            <returns><see langword="true"/> if there is a valid <see cref="T:LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter"/>; otherwise <see langword="false"/></returns>
+        </member>
+        <member name="M:LethalBots.Managers.VehicleManager.TryGetVehicleInfo(VehicleController,LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter@)">
+            <summary>
+            Gets the info for the following <paramref name="vehicleController"/>
+            </summary>
+            <param name="vehicleController">The vehicle to get the info for.</param>
+            <param name="vehicleInfo">The <see cref="T:LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter"/> associated with the given <paramref name="vehicleController"/> or null</param>
+            <returns><see langword="true"/> if there is a valid <see cref="T:LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter"/>; otherwise <see langword="false"/></returns>
+        </member>
+        <member name="M:LethalBots.Managers.VehicleManager.TryGetVehicleInfo``2(LethalBots.Utils.Helpers.VehicleAdapter{``0,``1}@)">
+            <summary>
+            Gets the info for the following <typeparamref name="TVehicle"/>
+            </summary>
+            <typeparam name="TVehicle">The vehicle type to get the info for.</typeparam>
+            <typeparam name="TGearRequest"></typeparam>
+            <param name="vehicleInfo">The <see cref="T:LethalBots.Utils.Helpers.VehicleAdapter`2"/> associated with the given <typeparamref name="TVehicle"/> or null</param>
+            <returns><see langword="true"/> if there is a valid <see cref="T:LethalBots.Utils.Helpers.VehicleAdapter`2"/>; otherwise <see langword="false"/></returns>
+        </member>
         <member name="T:LethalBots.NetworkSerializers.LethalBotGroupMemberNetworkSerializable">
             <summary>
             Class for serializing groups of players and/or bots
@@ -6740,6 +6853,14 @@
             <param name="playerTransform"></param>
             <param name="___hasTriggered"></param>
         </member>
+        <member name="M:LethalBots.Patches.MapPatches.InteractTriggerPatch.StopUsingClientRpc_Postfix(InteractTrigger,System.Int32)">
+            <summary>
+            This fixes a logic error in the game where for some unknown reason playerScriptInSpecialAnimation
+            is NOT cleared for the local player............
+            </summary>
+            <param name="__instance"></param>
+            <param name="playerUsing"></param>
+        </member>
         <member name="T:LethalBots.Patches.MapPatches.OutOfBoundsTriggerPatch">
             <summary>
             Patch for <c>OutOfBoundsTrigger</c>
@@ -6778,17 +6899,34 @@
             Patch for <c>VehicleController</c>
             </summary>
         </member>
-        <member name="M:LethalBots.Patches.MapPatches.VehicleControllerPatch.Start_Finalizer(System.Exception)">
-            <summary>
-            HACKHACK: Postfixes are not called if the method throws an exception.
-            Zeekerss has some kind of error in here that causes it to throw an exception.
-            </summary>
-            <param name="__exception"></param>
-            <returns></returns>
-        </member>
         <member name="M:LethalBots.Patches.MapPatches.VehicleControllerPatch.DamagePlayerInVehicle_PostFix(VehicleController,UnityEngine.Vector3,System.Single)">
             <summary>
             Patch for damaging the bots owned by client in vehicle
+            </summary>
+        </member>
+        <member name="M:LethalBots.Patches.MapPatches.VehicleControllerPatch.SetPassengerInCar_Postfix(VehicleController,GameNetcodeStuff.PlayerControllerB)">
+            <summary>
+            There is a logic error in the base game where if the local player sits in the passenger seat
+            their collision is still enabled. This causes the player to collide with the crusier if a bot
+            is driving it and said bot is owned by the local client. This patch fixes is by force disabling the collision for any player
+            if they are in the passenger seat.
+            </summary>
+            <param name="__instance"></param>
+            <param name="player"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LethalBots.Patches.MapPatches.VehicleControllerPatch.SpringDriverSeatClientRpc_Transpiler(System.Collections.Generic.IEnumerable{HarmonyLib.CodeInstruction},System.Reflection.Emit.ILGenerator)">
+            <summary>
+            A transpiler is better here since we can make sure the code only runs once
+            </summary>
+            <remarks>
+            I'm lucky here and Zeekerss adds the forces to the <see cref="F:VehicleController.currentDriver"/>, so I just
+            need to change the check for local player to also consider bots that are owned by the local player.
+            </remarks>
+        </member>
+        <member name="M:LethalBots.Patches.MapPatches.VehicleControllerPatch.DestroyCar_PreFix(VehicleController,System.Boolean)">
+            <summary>
+            Patch for killing bot when car is destroyed
             </summary>
         </member>
         <member name="M:LethalBots.Patches.ModPatches.AutoRevive.LethalBotAutoReviveHelper.GetAutoReviveHandler(GameNetcodeStuff.PlayerControllerB)">
@@ -6852,6 +6990,18 @@
             <summary>
             Patch for <c>CustomAnimationObjects</c>
             </summary>
+        </member>
+        <member name="M:LethalBots.Patches.ModPatches.BetterLethalVRM.BetterLethalVRMPatch.FindUpdatedIDs_Transpiler(System.Collections.Generic.IEnumerable{HarmonyLib.CodeInstruction},System.Reflection.Emit.ILGenerator)">
+            <summary>
+            Helper transpiler that allows bots to be affected by LethalVRM.
+            </summary>
+            <remarks>
+            Lethal VRM doesn't do any of its logic when a <see cref="T:GameNetcodeStuff.PlayerControllerB"/> is owned by the server, (unless its the host object).<br/>
+            This transpiler changes it so it affects bots as well regardless.
+            </remarks>
+            <param name="instructions"></param>
+            <param name="generator"></param>
+            <returns></returns>
         </member>
         <member name="T:LethalBots.Patches.ModPatches.BrutalCompany.BrutalCompanyCompatibility">
             <summary>Reads the Reborn API; never creates, rerolls, or forces events.</summary>
@@ -7274,6 +7424,20 @@
             Utilitary class for displaying debug log of infos of objects
             </summary>
         </member>
+        <member name="M:LethalBots.Utils.ComponentUtil.FindChildWithName(UnityEngine.Transform,System.String)">
+            <summary>
+            Finds a child transform with the specified name in the hierarchy of the given parent transform.
+            </summary>
+            <remarks>
+            Only exists since the default Unity <see cref="M:UnityEngine.Transform.Find(System.String)"/> method only searches for direct children, 
+            not grandchildren or deeper descendants. <br/>
+            WARNING: This method is recursive and may have performance implications if the hierarchy is deep or has many child objects. Use with caution. <br/>
+            You should consider caching the result of this method if you need to access the same child multiple times.
+            </remarks>
+            <param name="parent"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
         <member name="T:LethalBots.Utils.DrawUtil">
             <summary>
             Utilitary class for help drawing using <c>LineRenderer</c>
@@ -7295,26 +7459,6 @@
             <summary>
             Helper class that represents a chat command!
             </summary>
-        </member>
-        <member name="M:LethalBots.Utils.Helpers.ChatCommand.#ctor(System.String,System.Func{LethalBots.AI.AIState,LethalBots.AI.LethalBotAI,GameNetcodeStuff.PlayerControllerB,System.String,System.Boolean,System.Boolean})">
-            <summary>
-            Creates a new chat command
-            </summary>
-            <remarks>
-            WARNING: <paramref name="keyword"/> will be forced into lower case!
-            </remarks>
-            <param name="keyword"></param>
-            <param name="execute"></param>
-        </member>
-        <member name="M:LethalBots.Utils.Helpers.ChatCommand.#ctor(System.String[],System.Func{LethalBots.AI.AIState,LethalBots.AI.LethalBotAI,GameNetcodeStuff.PlayerControllerB,System.String,System.Boolean,System.Boolean})">
-            <summary>
-            Creates a new chat command with multiple aliases.
-            </summary>
-            <remarks>
-            WARNING: <paramref name="keywords"/> will be forced into lower case!
-            </remarks>
-            <param name="keywords"></param>
-            <param name="execute"></param>
         </member>
         <member name="M:LethalBots.Utils.Helpers.CountdownTimer.Reset">
             <summary>
@@ -7416,6 +7560,14 @@
             Helper class that helps bots press their interact key on stuff!
             </summary>
         </member>
+        <member name="T:LethalBots.Utils.Helpers.LethalBotInteraction.PostInteractFunction">
+            <summary>
+            Helper delegate for custom post interaction functions
+            </summary>
+            <param name="lethalBotAI">The bot who this action is associated  with</param>
+            <param name="lethalBotController">The bot's <see cref="T:GameNetcodeStuff.PlayerControllerB"/></param>
+            <param name="interactTrigger">The <see cref="T:InteractTrigger"/> the bot just finished using</param>
+        </member>
         <member name="M:LethalBots.Utils.Helpers.LethalBotInteraction.#ctor(InteractTrigger,System.Boolean,System.Boolean)">
             <summary>
             Creates a new LethalBotInteraction for the given <paramref name="interactTrigger"/>
@@ -7424,7 +7576,7 @@
             <param name="ignoreInteractablility">Should the bot ignore the <see cref="F:InteractTrigger.interactable"/> flag?</param>
             <param name="ignoreHandLimit">Should the bot ignore the held item limiations</param>
         </member>
-        <member name="M:LethalBots.Utils.Helpers.LethalBotInteraction.#ctor(InteractTrigger,System.Action{LethalBots.AI.LethalBotAI,GameNetcodeStuff.PlayerControllerB,InteractTrigger},System.Boolean,System.Boolean,System.Boolean)">
+        <member name="M:LethalBots.Utils.Helpers.LethalBotInteraction.#ctor(InteractTrigger,LethalBots.Utils.Helpers.LethalBotInteraction.PostInteractFunction,System.Boolean,System.Boolean,System.Boolean)">
             <summary>
             Creates a new LethalBotInteraction for the given <paramref name="interactTrigger"/>
             </summary>
@@ -7463,30 +7615,6 @@
             Class that represents a UnityEvent for when a Lethal Bot talks, it contains the bot that is talking and the amplitude of what the bot said
             </summary>
         </member>
-        <member name="T:LethalBots.Utils.Helpers.Overrideable`1">
-            <summary>
-            Simple class used by <see cref="T:LethalBots.AI.NpcController"/> so I can have variables that can ignore updates
-            </summary>
-        </member>
-        <member name="P:LethalBots.Utils.Helpers.Overrideable`1.IsOverridden">
-            <summary>
-            When true, incoming updates should not overwrite the value.
-            Automatically cleared after Apply().
-            </summary>
-        </member>
-        <member name="P:LethalBots.Utils.Helpers.Overrideable`1.Value">
-            <summary>
-            Returns the value, or sets it directly which also sets <see cref="P:LethalBots.Utils.Helpers.Overrideable`1.IsOverridden"/> to true to prevent the next update from overwriting it.
-            </summary>
-        </member>
-        <member name="M:LethalBots.Utils.Helpers.Overrideable`1.Apply(`0)">
-            <summary>
-            Apply an external update unless the value was overridden.
-            </summary>
-            <remarks>
-            This is called by <see cref="!:PlayerControllerBPatch.Update_PreFix(PlayerControllerB, ref bool, bool, bool, ref float, ref bool, ref float, ref bool, ref bool, ref float, ref bool, ref float, ref float, ref bool, ref float, ref float, ref float, ref float)"/>
-            </remarks>
-        </member>
         <member name="T:LethalBots.Utils.Helpers.PriorityQueue`1">
             <summary>
             This is basicially <see cref="T:System.Collections.Generic.Queue`1"/>, but its designed to allow me to set the priority of messages!
@@ -7504,12 +7632,27 @@
         <member name="P:LethalBots.Utils.Helpers.PriorityQueue`1.Count">
             <inheritdoc cref="P:System.Collections.Generic.Queue`1.Count"/>
         </member>
+        <member name="T:LethalBots.Utils.Helpers.SafePathResult">
+            <summary>
+            A struct used by <see cref="M:LethalBots.AI.LethalBotAI.IsPathDangerousAsync(UnityEngine.AI.NavMeshPath,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Threading.CancellationToken)"/>
+            to represent if it found a safe or dangerous path.
+            </summary>
+        </member>
         <member name="T:LethalBots.Utils.Helpers.SignalTranslatorCommand">
             <summary>
             Helper class that represents a signal translator command!
             </summary>
         </member>
-        <member name="M:LethalBots.Utils.Helpers.SignalTranslatorCommand.#ctor(System.String,System.Func{LethalBots.AI.AIState,LethalBots.AI.LethalBotAI,System.String,System.Boolean})">
+        <member name="T:LethalBots.Utils.Helpers.SignalTranslatorCommand.SignalTranslatorCommandDelegate">
+            <summary>
+            A chat command callback
+            </summary>
+            <param name="state">The <paramref name="lethalBotAI"/>'s current AI state</param>
+            <param name="lethalBotAI">The bot who saw or heard the <paramref name="message"/></param>
+            <param name="message">The message sent on the signal translator</param>
+            <returns><see langword="true"/> if the given <paramref name="state"/> took some kind of action on the given <paramref name="message"/>; otherwise <see langword="false"/></returns>
+        </member>
+        <member name="M:LethalBots.Utils.Helpers.SignalTranslatorCommand.#ctor(System.String,LethalBots.Utils.Helpers.SignalTranslatorCommand.SignalTranslatorCommandDelegate)">
             <summary>
             Creates a new chat command
             </summary>
@@ -7558,20 +7701,20 @@
             This is a class since <see cref="T:System.Runtime.CompilerServices.ConditionalWeakTable`2"/> only accepts classes!
             </remarks>
         </member>
-        <member name="M:LethalBots.Utils.Helpers.UpdateLimiter.GetOrCreateMonitor(EnemyAI,System.Single)">
+        <member name="M:LethalBots.Utils.Helpers.UpdateLimiter.GetOrCreateMonitor(System.Object,System.Single)">
             <summary>
             Helper function that retrieves the <see cref="T:LethalBots.Utils.Helpers.UpdateLimiter"/>
-            for the given <see cref="T:EnemyAI"/>
+            for the given <see cref="T:System.Object"/>
             </summary>
-            <param name="ai">The enemy AI instance to monitor</param>
+            <param name="instance">The object instance to monitor</param>
             <param name="updateInterval">The amount of time that should pass between calls to the patch</param>
-            <returns>The <see cref="T:LethalBots.Utils.Helpers.UpdateLimiter"/> associated with the given <see cref="T:EnemyAI"/></returns>
+            <returns>The <see cref="T:LethalBots.Utils.Helpers.UpdateLimiter"/> associated with the given <see cref="T:System.Object"/></returns>
         </member>
-        <member name="M:LethalBots.Utils.Helpers.UpdateLimiter.RemoveMonitor(EnemyAI)">
+        <member name="M:LethalBots.Utils.Helpers.UpdateLimiter.RemoveMonitor(System.Object)">
             <summary>
-            Removes the specified enemy AI instance from the monitoring list.
+            Removes the specified object instance from the monitoring list.
             </summary>
-            <param name="ai">The enemy AI instance to remove from monitoring. Cannot be null.</param>
+            <param name="instance">The object instance to remove from monitoring. Cannot be null.</param>
         </member>
         <member name="M:LethalBots.Utils.Helpers.UpdateLimiter.SetUpdateInterval(System.Single)">
             <summary>
@@ -7588,6 +7731,437 @@
         <member name="M:LethalBots.Utils.Helpers.UpdateLimiter.Invalidate">
             <summary>
             Restarts our update limiter by using our set <see cref="F:LethalBots.Utils.Helpers.UpdateLimiter.updateInterval"/>
+            </summary>
+        </member>
+        <member name="T:LethalBots.Utils.Helpers.VehicleAdapter`2">
+            <summary>
+            Abstract class that allows you to customize how bots interact with vehicles.
+            </summary>
+            <remarks>
+            This is a generic class that allows you control on how bots interact with vehicles.
+            </remarks>
+        </member>
+        <member name="M:LethalBots.Utils.Helpers.VehicleAdapter`2.EndCoroutine(LethalBots.AI.LethalBotAI)">
+            <summary>
+            This tells the given <paramref name="lethalBotAI"/> that your coroutine has finished.
+            </summary>
+            <remarks>
+            WARNING: YOU MUST CALL THIS WHEN ANY OF YOUR COROUTINES FINISH OR ELSE THE BOT WILL ENTER AN INFINTE LOOP
+            </remarks>
+            <param name="lethalBotAI"></param>
+        </member>
+        <member name="M:LethalBots.Utils.Helpers.VehicleAdapter`2.CanDrive(`0,LethalBots.AI.LethalBotAI)">
+            <inheritdoc cref="M:LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter.CanDrive(VehicleController,LethalBots.AI.LethalBotAI)"/>
+        </member>
+        <member name="M:LethalBots.Utils.Helpers.VehicleAdapter`2.IsVehicleDestroyed(`0)">
+            <inheritdoc cref="M:LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter.IsVehicleDestroyed(VehicleController)"/>
+        </member>
+        <member name="M:LethalBots.Utils.Helpers.VehicleAdapter`2.IsSeatOccupied(`0,InteractTrigger,GameNetcodeStuff.PlayerControllerB@)">
+            <inheritdoc cref="M:LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter.IsSeatOccupied(VehicleController,InteractTrigger,GameNetcodeStuff.PlayerControllerB@)"/>
+        </member>
+        <member name="M:LethalBots.Utils.Helpers.VehicleAdapter`2.IsPlayerInVehicle(VehicleController,GameNetcodeStuff.PlayerControllerB,InteractTrigger@)">
+            <inheritdoc cref="M:LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter.IsPlayerInVehicle(VehicleController,GameNetcodeStuff.PlayerControllerB,InteractTrigger@)"/>
+        </member>
+        <member name="M:LethalBots.Utils.Helpers.VehicleAdapter`2.SetupNavMeshAgent(UnityEngine.AI.NavMeshAgent,`0,LethalBots.AI.LethalBotAI)">
+            <inheritdoc cref="M:LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter.SetupNavMeshAgent(UnityEngine.AI.NavMeshAgent,VehicleController,LethalBots.AI.LethalBotAI)"/>
+        </member>
+        <member name="M:LethalBots.Utils.Helpers.VehicleAdapter`2.SetAreaCostsForCruiser(UnityEngine.AI.NavMeshAgent,VehicleController)">
+            <inheritdoc cref="M:LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter.SetAreaCostsForCruiser(UnityEngine.AI.NavMeshAgent,VehicleController)"/>
+        </member>
+        <member name="M:LethalBots.Utils.Helpers.VehicleAdapter`2.CleanupBotDriver(`0,LethalBots.AI.LethalBotAI)">
+            <inheritdoc cref="M:LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter.CleanupBotDriver(VehicleController,LethalBots.AI.LethalBotAI)"/>
+        </member>
+        <member name="M:LethalBots.Utils.Helpers.VehicleAdapter`2.StartCar(`0,LethalBots.AI.LethalBotAI)">
+            <inheritdoc cref="M:LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter.StartCar(VehicleController,LethalBots.AI.LethalBotAI)"/>
+        </member>
+        <member name="M:LethalBots.Utils.Helpers.VehicleAdapter`2.IsIgnitionStarted(`0)">
+            <summary>
+            Check if the car is started or not
+            </summary>
+            <remarks>
+            Handles the default Company Cruiser by default.
+            </remarks>
+            <param name="vehicleController">The vehicle to check</param>
+            <returns><see langword="true"/> if the car is started, <see langword="false"/> otherwise</returns>
+        </member>
+        <member name="M:LethalBots.Utils.Helpers.VehicleAdapter`2.ChangeGear(`0,`1,LethalBots.AI.LethalBotAI)">
+            <inheritdoc cref="M:LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter.ChangeGear(VehicleController,LethalBots.Utils.Helpers.VehicleHelpers.IChangeGearRequest,LethalBots.AI.LethalBotAI)"/>
+        </member>
+        <member name="M:LethalBots.Utils.Helpers.VehicleAdapter`2.FindOpenPassengerSeat(`0,LethalBots.AI.LethalBotAI)">
+            <inheritdoc cref="M:LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter.FindOpenPassengerSeat(VehicleController,LethalBots.AI.LethalBotAI)"/>
+        </member>
+        <member name="M:LethalBots.Utils.Helpers.VehicleAdapter`2.GetDriverSeat(`0,LethalBots.AI.LethalBotAI)">
+            <inheritdoc cref="M:LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter.GetDriverSeat(VehicleController,LethalBots.AI.LethalBotAI)"/>
+        </member>
+        <member name="M:LethalBots.Utils.Helpers.VehicleAdapter`2.FindOpenTrunkPosition(`0,LethalBots.AI.LethalBotAI)">
+            <inheritdoc cref="M:LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter.FindOpenTrunkPosition(VehicleController,LethalBots.AI.LethalBotAI)"/>
+        </member>
+        <member name="M:LethalBots.Utils.Helpers.VehicleAdapter`2.IsTrunkOpen(`0,LethalBots.AI.LethalBotAI)">
+            <summary>
+            Checks if the trunk of the vehicle is open or not.
+            </summary>
+            <remarks>
+            Handles the default Company Cruiser by default.
+            </remarks>
+            <param name="vehicleController">The vehicle to check</param>
+            <param name="lethalBotAI">The bot's <see cref="T:LethalBots.AI.LethalBotAI"/></param>
+            <returns>true if the trunk is open, false otherwise.</returns>
+        </member>
+        <member name="M:LethalBots.Utils.Helpers.VehicleAdapter`2.OpenTrunk(`0,LethalBots.AI.LethalBotAI)">
+            <inheritdoc cref="M:LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter.OpenTrunk(VehicleController,LethalBots.AI.LethalBotAI)"/>
+        </member>
+        <member name="M:LethalBots.Utils.Helpers.VehicleAdapter`2.CloseTrunk(`0,LethalBots.AI.LethalBotAI)">
+            <inheritdoc cref="M:LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter.CloseTrunk(VehicleController,LethalBots.AI.LethalBotAI)"/>
+        </member>
+        <member name="M:LethalBots.Utils.Helpers.VehicleAdapter`2.EnterVehicle(`0,LethalBots.AI.LethalBotAI,InteractTrigger)">
+            <inheritdoc cref="M:LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter.EnterVehicle(VehicleController,LethalBots.AI.LethalBotAI,InteractTrigger)"/>
+        </member>
+        <member name="M:LethalBots.Utils.Helpers.VehicleAdapter`2.ExitVehicle(`0,LethalBots.AI.LethalBotAI)">
+            <inheritdoc cref="M:LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter.ExitVehicle(VehicleController,LethalBots.AI.LethalBotAI)"/>
+        </member>
+        <member name="M:LethalBots.Utils.Helpers.VehicleAdapter`2.DriveVehicle(`0,LethalBots.AI.LethalBotAI,UnityEngine.AI.NavMeshAgent)">
+            <inheritdoc cref="M:LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter.DriveVehicle(VehicleController,LethalBots.AI.LethalBotAI,UnityEngine.AI.NavMeshAgent)"/>
+        </member>
+        <member name="M:LethalBots.Utils.Helpers.VehicleAdapter`2.UpdateVehicleInput(`0,LethalBots.AI.LethalBotAI,UnityEngine.AI.NavMeshAgent,LethalBots.Utils.Helpers.VehicleHelpers.VehicleInputHelper@)">
+            <summary>
+            Allows you to customize how the bot updates the vehicle input while driving.
+            </summary>
+            <param name="vehicle">The vehicle the bot is driving</param>
+            <param name="bot">The bot's <see cref="T:LethalBots.AI.LethalBotAI"/></param>
+            <param name="agent">The vehicle's <see cref="T:UnityEngine.AI.NavMeshAgent"/></param>
+            <param name="input">The vehicle input to update</param>
+        </member>
+        <member name="T:LethalBots.Utils.Helpers.VehicleHelpers.CompanyCruiserGearRequest">
+            <summary>
+            Information about a gear change for the Company Cruiser <br/>
+            <see cref="T:VehicleController"/> for how its used in the Company Cruiser
+            </summary>
+        </member>
+        <member name="T:LethalBots.Utils.Helpers.VehicleHelpers.IChangeGearRequest">
+            <summary>
+            Information about a gear change for a vehicle
+            </summary>
+            <remarks>
+            Nothing here by default, you can create your own struct or class that inherits from this one and add your own information to it!
+            </remarks>
+        </member>
+        <member name="T:LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter">
+            <summary>
+            Helper interface for use in <see cref="T:LethalBots.Utils.Helpers.VehicleAdapter`2"/>
+            </summary>
+        </member>
+        <member name="P:LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter.VehicleType">
+            <summary>
+            The type of this vehicle
+            </summary>
+        </member>
+        <member name="P:LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter.NavMeshAgentTypeID">
+            <summary>
+            Custom Agent ID for the vehicle <br/>
+            Lethal Bots defines a custom Cruiser NavSettings by default: <see cref="F:LethalBots.Constants.Const.LETHAL_BOT_CRUISER_NAV_SETTINGS_ID"/>
+            </summary>
+            <remarks>
+            WARNING: IF YOU WANT CUSTOM NAVMESH SETTING FOR YOUR VEHICLE, YOU ARE RESPONSIBLE FOR CREATING CUSTOM AGENT TYPES FOR YOUR CRUISER <br/>
+            The default Cruiser NavSettings should work for MOST vehicles
+            </remarks>
+        </member>
+        <member name="P:LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter.MaxDrivingSpeed">
+            <summary>
+            The maximum speed the bot should attempt to drive at.
+            </summary>
+        </member>
+        <member name="P:LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter.MinDrivingSpeed">
+            <summary>
+            The bare minimum speed the bot should attempt to drive at.
+            </summary>
+        </member>
+        <member name="P:LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter.MinCornerSpeed">
+            <summary>
+            The minimum speed to maintain while making very sharp turns.
+            </summary>
+        </member>
+        <member name="P:LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter.ChangeGearSpeed">
+            <summary>
+            The cruiser's speed before we should change gears
+            </summary>
+        </member>
+        <member name="P:LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter.SlowdownDistance">
+            <summary>
+            How far from the destination the bot begins slowing down.
+            </summary>
+        </member>
+        <member name="P:LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter.StopDistance">
+            <summary>
+            The distance at which the bot should come to a complete stop.
+            </summary>
+        </member>
+        <member name="P:LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter.SpeedTolerance">
+            <summary>
+            Acceptable speed error before applying throttle or brakes.
+            </summary>
+        </member>
+        <member name="P:LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter.SteeringAngle">
+            <summary>
+            The angle the max angle vehicle can turn
+            </summary>
+        </member>
+        <member name="P:LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter.ReverseEnterAngle">
+            <summary>
+            The minimum heading error at which the bot will consider reversing
+            instead of making a large forward turn.
+            </summary>
+        </member>
+        <member name="P:LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter.ReverseExitAngle">
+            <summary>
+            The minimum heading error at which the bot will consider to stop reversing.
+            </summary>
+        </member>
+        <member name="M:LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter.CanDrive(VehicleController,LethalBots.AI.LethalBotAI)">
+            <summary>
+            Allows you to check if the bot can drive the vehicle or not.
+            </summary>
+            <param name="vehicleController">The vehicle to check</param>
+            <param name="lethalBotAI">The bot's <see cref="T:LethalBots.AI.LethalBotAI"/></param>
+            <returns><see langword="true"/> if the bot can drive the vehicle, <see langword="false"/> otherwise</returns>
+        </member>
+        <member name="M:LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter.IsVehicleDestroyed(VehicleController)">
+            <summary>
+            Checks if the given <paramref name="vehicleController"/> is destroyed
+            </summary>
+            <param name="vehicleController">The vehicle to check</param>
+            <returns><see langword="true"/> if the <paramref name="vehicleController"/> is destroyed; otherwise <see langword="false"/></returns>
+        </member>
+        <member name="M:LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter.IsSeatOccupied(VehicleController,InteractTrigger,GameNetcodeStuff.PlayerControllerB@)">
+            <summary>
+            Checks if the given <paramref name="seatTrigger"/> is occupied
+            </summary>
+            <param name="vehicleController">The vehicle to check</param>
+            <param name="seatTrigger">The seat to check</param>
+            <param name="playerInSeat">The player who is sitting in the seat. Null if no-one is in the seat</param>
+            <returns><see langword="true"/> if the <paramref name="seatTrigger"/> is occupied; otherwise <see langword="false"/></returns>
+        </member>
+        <member name="M:LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter.IsPlayerInVehicle(VehicleController,GameNetcodeStuff.PlayerControllerB,InteractTrigger@)">
+            <summary>
+            Checks if the given player is in the vehicle
+            </summary>
+            <param name="vehicleController">The vehicle to check</param>
+            <param name="playerToCheck">The player to check</param>
+            <param name="seatTrigger">The seat <paramref name="playerToCheck"/> was sitting in. May be null if player is standing on vehicle</param>
+            <returns><see langword="true"/> if the player is sitting in the vehicle; otherwise <see langword="false"/></returns>
+        </member>
+        <member name="M:LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter.SetupNavMeshAgent(UnityEngine.AI.NavMeshAgent,VehicleController,LethalBots.AI.LethalBotAI)">
+            <summary>
+            Allows you to setup the Cruiser's NavMesh agent with your own custom variables
+            </summary>
+            <param name="agent">The <see cref="T:UnityEngine.AI.NavMeshAgent"/> the bot will be using</param>
+            <param name="vehicleController">The vehicle the bot intents to drive</param>
+            <param name="lethalBotAI">The bot who is prepping to use the vehicle</param>
+        </member>
+        <member name="M:LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter.SetAreaCostsForCruiser(UnityEngine.AI.NavMeshAgent,VehicleController)">
+            <summary>
+            Allows you to change the area costs for your Cruiser's NavMesh agent
+            </summary>
+            <remarks>
+            This should be called in your <see cref="M:LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter.DriveVehicle(VehicleController,LethalBots.AI.LethalBotAI,UnityEngine.AI.NavMeshAgent)"/> 
+            loop as Unity may reset your set area costs. <br/>
+            You should not do expensive operations in here as this should be called every frame.
+            </remarks>
+            <param name="agent">The <see cref="T:UnityEngine.AI.NavMeshAgent"/> the bot is using</param>
+            <param name="vehicleController">The vehicle the bot intents to drive</param>
+        </member>
+        <member name="M:LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter.CleanupBotDriver(VehicleController,LethalBots.AI.LethalBotAI)">
+            <summary>
+            Called when a bot has decided it doesn't want to drive anymore
+            </summary>
+            <param name="vehicleController">The vehicle to cleanup</param>
+            <param name="lethalBotAI">The bot's <see cref="T:LethalBots.AI.LethalBotAI"/></param>
+        </member>
+        <member name="M:LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter.StartCar(VehicleController,LethalBots.AI.LethalBotAI)">
+            <summary>
+            Tells the bot to start the vehicle!
+            </summary>
+            <remarks>
+            This allows you as a modder to implement your own vehicle starting logic based on the vehicle.
+            </remarks>
+            <param name="vehicleController">The vehicle the <paramref name="lethalBotAI"/> is trying to start</param>
+            <param name="lethalBotAI">The bot's <see cref="T:LethalBots.AI.LethalBotAI"/></param>
+            <returns></returns>
+        </member>
+        <member name="M:LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter.IsIgnitionStarted(VehicleController)">
+            <summary>
+            Check if the car is started or not
+            </summary>
+            <remarks>
+            Handles the default Company Cruiser by default.
+            </remarks>
+            <param name="vehicleController">The vehicle to check</param>
+            <returns><see langword="true"/> if the car is started, <see langword="false"/> otherwise</returns>
+        </member>
+        <member name="M:LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter.ChangeGear(VehicleController,LethalBots.Utils.Helpers.VehicleHelpers.IChangeGearRequest,LethalBots.AI.LethalBotAI)">
+            <summary>
+            Allows you to set how the bot changes gears.
+            </summary>
+            <remarks>
+            I added this cause of the Scanvan! YOUR KEYS ARE IN THE IGNITION!
+            </remarks>
+            <param name="vehicleController">The vehicle to change gears for</param>
+            <param name="changeGearInfo">Information about the gear change</param>
+            <param name="lethalBotAI">The bot's <see cref="T:LethalBots.AI.LethalBotAI"/></param>
+            <returns></returns>
+        </member>
+        <member name="M:LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter.FindOpenPassengerSeat(VehicleController,LethalBots.AI.LethalBotAI)">
+            <summary>
+            Finds an open passenger seat in the vehicle.
+            </summary>
+            <remarks>
+            This doesn't include the driver seat, only passenger seats. <br/>
+            Makes it easy for you to tell the bot about open passenger seats. <br/>
+            Bots will use this to find a seat to sit in if they are not the driver. <br/>
+            This can be called often by bots. Try not to do expensive operations in here.
+            </remarks>
+            <param name="vehicleController">The vehicle to check for open passenger seats</param>
+            <param name="lethalBotAI">The bot's <see cref="T:LethalBots.AI.LethalBotAI"/></param>
+            <returns>The open passenger seat, or null if none is available.</returns>
+        </member>
+        <member name="M:LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter.GetDriverSeat(VehicleController,LethalBots.AI.LethalBotAI)">
+            <summary>
+            Finds the driver seat in the vehicle.
+            </summary>
+            <remarks>
+            Unlike <see cref="M:LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter.FindOpenPassengerSeat(VehicleController,LethalBots.AI.LethalBotAI)"/> this should ALWAYS return the driver seat. <br/>
+            Bots use this to see if they can drive <paramref name="vehicleController"/>. <br/>
+            This will be called more often then <see cref="M:LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter.FindOpenPassengerSeat(VehicleController,LethalBots.AI.LethalBotAI)"/>, so try not to do expensive operations in here.
+            </remarks>
+            <param name="vehicleController">The vehicle to check for the driver seat</param>
+            <param name="lethalBotAI">The bot's <see cref="T:LethalBots.AI.LethalBotAI"/></param>
+            <returns>The driver seat.</returns>
+        </member>
+        <member name="M:LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter.FindOpenTrunkPosition(VehicleController,LethalBots.AI.LethalBotAI)">
+            <summary>
+            Finds a place for the bot to stand in the trunk of the vehicle.
+            </summary>
+            <remarks>
+            Some vehicles don't have enough seats for all players, 
+            so this allows you to find a place for the bot to stand in the trunk of the vehicle. <br/>
+            This can be called often by bots. Try not to do expensive operations in here.
+            </remarks>
+            <param name="vehicleController">The vehicle to check for an open trunk position</param>
+            <param name="lethalBotAI">The bot's <see cref="T:LethalBots.AI.LethalBotAI"/></param>
+            <returns>The open trunk position, or null if none is available.</returns>
+        </member>
+        <member name="M:LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter.IsTrunkOpen(VehicleController,LethalBots.AI.LethalBotAI)">
+            <summary>
+            Checks if the trunk of the vehicle is open or not.
+            </summary>
+            <remarks>
+            Handles the vanilla Company Cruiser by default.
+            </remarks>
+            <param name="vehicleController">The vehicle to check</param>
+            <param name="lethalBotAI">The bot's <see cref="T:LethalBots.AI.LethalBotAI"/></param>
+            <returns>true if the trunk is open, false otherwise.</returns>
+        </member>
+        <member name="M:LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter.OpenTrunk(VehicleController,LethalBots.AI.LethalBotAI)">
+            <summary>
+            Allows you to customize how the bot opens the trunk of the vehicle.
+            </summary>
+            <param name="vehicleController">The vehicle to open the trunk of</param>
+            <param name="lethalBotAI">The bot's <see cref="T:LethalBots.AI.LethalBotAI"/></param>
+            <returns></returns>
+        </member>
+        <member name="M:LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter.CloseTrunk(VehicleController,LethalBots.AI.LethalBotAI)">
+            <summary>
+            Allows you to customize how the bot closes the trunk of the vehicle.
+            </summary>
+            <param name="vehicleController">The vehicle to close the trunk of</param>
+            <param name="lethalBotAI">The bot's <see cref="T:LethalBots.AI.LethalBotAI"/></param>
+            <returns></returns>
+        </member>
+        <member name="M:LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter.EnterVehicle(VehicleController,LethalBots.AI.LethalBotAI,InteractTrigger)">
+            <summary>
+            Allows you to customize how the bot enters the vehicle.
+            </summary>
+            <remarks>
+            This allows you to make it so the bot opens the door, gets in, and closes the door.....etc....<br/>
+            NOTE: This is only called if the bot wants to enter a seat in the vehicle.
+            </remarks>
+            <param name="vehicleController">The vehicle to enter</param>
+            <param name="lethalBotAI">The bot's <see cref="T:LethalBots.AI.LethalBotAI"/></param>
+            <param name="seatTrigger">The seat trigger to use</param>
+            <returns></returns>
+        </member>
+        <member name="M:LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter.ExitVehicle(VehicleController,LethalBots.AI.LethalBotAI)">
+            <summary>
+            Allows you to customize how the bot exits the vehicle.
+            </summary>
+            <remarks>
+            This allows you to make it so the bot opens the door, gets out, and closes the door.....oh and for turning the car off if they are the driver.....etc....<br/>
+            NOTE: This is only called if the bot wants to exit a seat in the vehicle.
+            </remarks>
+            <param name="vehicleController">The vehicle to exit</param>
+            <param name="lethalBotAI">The bot's <see cref="T:LethalBots.AI.LethalBotAI"/></param>
+            <returns></returns>
+        </member>
+        <member name="M:LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter.DriveVehicle(VehicleController,LethalBots.AI.LethalBotAI,UnityEngine.AI.NavMeshAgent)">
+            <summary>
+            A coroutine that runs while the bot is driving the vehicle.
+            </summary>
+            <remarks>
+            This is where you can implement your own driving logic for the bot. <br/>
+            You will be responsible for starting the car, setting the throttle, steering, and braking of the vehicle. <br/>
+            A helper function <see cref="M:LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter.UpdateVehicleInput(VehicleController,LethalBots.AI.LethalBotAI,UnityEngine.AI.NavMeshAgent,LethalBots.Utils.Helpers.VehicleHelpers.VehicleInputHelper@)"/>
+            has been provided with confirguable variables to make it easier to teach the bots how to drive. <br/>
+            A default implementation has been provided in <see cref="T:LethalBots.Utils.Helpers.VehicleAdapter`2"/> <br/>
+            The bot will use the <paramref name="vehicleAgent"/> to calculate the path to the destination, but you will be responsible for actually driving the vehicle. <br/>
+            </remarks>
+            <param name="vehicleController">The vehicle the bot is driving</param>
+            <param name="lethalBotAI">The bot's <see cref="T:LethalBots.AI.LethalBotAI"/></param>
+            <param name="vehicleAgent">The vehicle's <see cref="T:UnityEngine.AI.NavMeshAgent"/></param>
+            <returns></returns>
+        </member>
+        <member name="M:LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter.UpdateVehicleInput(VehicleController,LethalBots.AI.LethalBotAI,UnityEngine.AI.NavMeshAgent,LethalBots.Utils.Helpers.VehicleHelpers.VehicleInputHelper@)">
+            <summary>
+            Allows you to customize how the bot updates the vehicle input while driving.
+            </summary>
+            <param name="vehicle">The vehicle the bot is driving</param>
+            <param name="bot">The bot's <see cref="T:LethalBots.AI.LethalBotAI"/></param>
+            <param name="agent">The vehicle's <see cref="T:UnityEngine.AI.NavMeshAgent"/></param>
+            <param name="input">The vehicle input to update</param>
+        </member>
+        <member name="T:LethalBots.Utils.Helpers.VehicleHelpers.VehicleInputHelper">
+            <summary>
+            Helper class for vehicle input related functionality
+            </summary>
+        </member>
+        <member name="P:LethalBots.Utils.Helpers.VehicleHelpers.VehicleInputHelper.WantsForward">
+            <summary>
+            Checks if the bot wants to drive forward
+            </summary>
+        </member>
+        <member name="P:LethalBots.Utils.Helpers.VehicleHelpers.VehicleInputHelper.WantsReverse">
+            <summary>
+            Checks if the bot wants to drive backwards
+            </summary>
+        </member>
+        <member name="P:LethalBots.Utils.Helpers.VehicleHelpers.VehicleInputHelper.ThrottleMagnitude">
+            <summary>
+            Used in <see cref="M:LethalBots.Patches.MapPatches.VehicleControllerPatch.GetVehicleInput_Prefix(VehicleController)"/> to
+            actually apply the input, since it only cares about positive values
+            </summary>
+        </member>
+        <member name="M:LethalBots.Utils.Helpers.VehicleHelpers.VehicleInputHelper.GetActualSteering">
+            <summary>
+            Grabs the bot's desired steering angle based on the direction the bot wants to drive in
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LethalBots.Utils.Helpers.VehicleHelpers.VehicleInputHelper.Zero">
+            <summary>
+            Clears the bot's current input 
+            </summary>
+        </member>
+        <member name="M:LethalBots.Utils.Helpers.VehicleHelpers.VehicleInputHelper.Reset">
+            <summary>
+            Calls <see cref="M:LethalBots.Utils.Helpers.VehicleHelpers.VehicleInputHelper.Zero"/> and clears all flags as well
             </summary>
         </member>
         <member name="T:LethalBots.Utils.Helpers.WeaponInfo">
@@ -7745,6 +8319,20 @@
             <summary>
             Utilitary class to help visualize component hierarchy with transform on an object, VERY NOT WORKING
             </summary>
+        </member>
+        <member name="T:LethalBots.Utils.Vehicles.CompanyCruiserInfo">
+            <summary>
+            Information about the vanilla Company Cruiser and how to interact with it
+            </summary>
+        </member>
+        <member name="M:LethalBots.Utils.Vehicles.CompanyCruiserInfo.CanExitCar(VehicleController,GameNetcodeStuff.PlayerControllerB,System.Boolean)">
+            <summary>
+            Carbon copy of <see cref="M:VehicleController.CanExitCar(System.Boolean)"/>, but made for bots
+            </summary>
+            <param name="vehicleController"></param>
+            <param name="lethalbotController"></param>
+            <param name="passengerSide"></param>
+            <returns></returns>
         </member>
     </members>
 </doc>
