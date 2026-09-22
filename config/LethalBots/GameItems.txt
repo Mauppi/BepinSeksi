@@ -259,6 +259,9 @@ Name: Shell with ID: 37817
 Name: SlayerShotgun with ID: 3719823
 Name: Grabbable Turret with ID: 3719824
 Name: Grabbable Landmine with ID: 3719825
+Name: SlayerShotgun with ID: 3719823
+Name: Grabbable Turret with ID: 3719824
+Name: Grabbable Landmine with ID: 3719825
 Listing all unlockable items in the game!
 Name: Orange suit with ID: 0
 Name: Green suit with ID: 1

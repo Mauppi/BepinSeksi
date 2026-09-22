@@ -879,11 +879,11 @@
             <param name="player"></param>
             <returns></returns>
         </member>
-        <member name="M:LethalBots.AI.AIStates.MissionControlState.TryTeleportPlayer(System.Boolean,System.Boolean)">
+        <member name="M:LethalBots.AI.AIStates.MissionControlState.TryTeleportPlayer(GameNetcodeStuff.PlayerControllerB,System.Boolean)">
             <summary>
             Makes the bot teleport the currently targeted player
             </summary>
-            <param name="isDeadBody"></param>
+            <param name="expectedTarget"></param>
             <param name="skipPostCheck"></param>
             <returns></returns>
         </member>
@@ -995,21 +995,6 @@
             </summary>
             <param name="enemy"></param>
             <returns>The overriden name for the given <see cref="T:EnemyAI"/> or returns the name found in <see cref="F:EnemyAI.enemyType"/></returns>
-        </member>
-        <member name="M:LethalBots.AI.AIStates.MissionControlState.ShouldTeleportDeadBody(GameNetcodeStuff.PlayerControllerB)">
-            <summary>
-            Checks if we should teleport the dead body of the player!
-            </summary>
-            <param name="player">Player to check</param>
-            <returns></returns>
-        </member>
-        <member name="M:LethalBots.AI.AIStates.MissionControlState.IsBodyNearbyLivingPlayers(DeadBodyInfo,System.Single)">
-            <summary>
-            Helper function that checks if a dead body is nearby a living player
-            </summary>
-            <param name="deadBody"></param>
-            <param name="checkRadius"></param>
-            <returns></returns>
         </member>
         <member name="M:LethalBots.AI.AIStates.MissionControlState.IsPlayerInGraveDanger(GameNetcodeStuff.PlayerControllerB)">
             <summary>
