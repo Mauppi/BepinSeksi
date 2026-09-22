@@ -2885,7 +2885,7 @@
             </remarks>
             <param name="message">The message the bot wants to send</param>
             <param name="bypassConfig">Should we bypass the config check for allowing bots to chat?</param>
-            <param name="speakOutLoud">Whether generative speech may voice the message before the chat fallback is used.</param>
+            <param name="speakOutLoud">Whether this is event context requiring LLM wording; false is reserved for already-generated chat text.</param>
         </member>
         <member name="M:LethalBots.AI.LethalBotAI.CallPlayer(GameNetcodeStuff.PlayerControllerB)">
             <summary>
@@ -3649,7 +3649,7 @@
             Updates the drunkness and posion effects for the bot's <see cref="T:GameNetcodeStuff.PlayerControllerB"/>!
             </summary>
         </member>
-        <member name="M:LethalBots.AI.NpcController.UpdateLineOfSightCube">
+        <member name="F:LethalBots.AI.NpcController.nextLineOfSightProbe">
             <summary>
             I have no idea what the line of sight cube is, but it exists, so I need to update it!
             </summary>
@@ -6607,7 +6607,7 @@
             <param name="generator"></param>
             <returns></returns>
         </member>
-        <member name="M:LethalBots.Patches.GameEnginePatches.StartOfRoundPatch.UpdatePlayerVoiceEffects_Transpiler(System.Collections.Generic.IEnumerable{HarmonyLib.CodeInstruction},System.Reflection.Emit.ILGenerator)">
+        <member name="M:LethalBots.Patches.GameEnginePatches.StartOfRoundPatch.UpdatePlayerVoiceEffects_Transpiler(System.Collections.Generic.IEnumerable{HarmonyLib.CodeInstruction})">
             <summary>
             Check only real players not bots
             </summary>
@@ -6616,7 +6616,6 @@
             They also spam the debug log with errors about missing audio sources.
             </remarks>
             <param name="instructions"></param>
-            <param name="generator"></param>
             <returns></returns>
         </member>
         <member name="M:LethalBots.Patches.GameEnginePatches.StartOfRoundPatch.GetOwnerClientIdForJoin(Unity.Netcode.NetworkObject)">
