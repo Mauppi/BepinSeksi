@@ -7806,15 +7806,6 @@
         <member name="M:LethalBots.Utils.Helpers.VehicleAdapter`2.DriveVehicle(`0,LethalBots.AI.LethalBotAI,UnityEngine.AI.NavMeshAgent)">
             <inheritdoc cref="M:LethalBots.Utils.Helpers.VehicleHelpers.IVehicleAdapter.DriveVehicle(VehicleController,LethalBots.AI.LethalBotAI,UnityEngine.AI.NavMeshAgent)"/>
         </member>
-        <member name="M:LethalBots.Utils.Helpers.VehicleAdapter`2.UpdateVehicleInput(`0,LethalBots.AI.LethalBotAI,UnityEngine.AI.NavMeshAgent,LethalBots.Utils.Helpers.VehicleHelpers.VehicleInputHelper@)">
-            <summary>
-            Allows you to customize how the bot updates the vehicle input while driving.
-            </summary>
-            <param name="vehicle">The vehicle the bot is driving</param>
-            <param name="bot">The bot's <see cref="T:LethalBots.AI.LethalBotAI"/></param>
-            <param name="agent">The vehicle's <see cref="T:UnityEngine.AI.NavMeshAgent"/></param>
-            <param name="input">The vehicle input to update</param>
-        </member>
         <member name="T:LethalBots.Utils.Helpers.VehicleHelpers.CompanyCruiserGearRequest">
             <summary>
             Information about a gear change for the Company Cruiser <br/>
@@ -8128,7 +8119,7 @@
         </member>
         <member name="P:LethalBots.Utils.Helpers.VehicleHelpers.VehicleInputHelper.ThrottleMagnitude">
             <summary>
-            Used in <see cref="M:LethalBots.Patches.MapPatches.VehicleControllerPatch.GetVehicleInput_Prefix(VehicleController)"/> to
+            Used in <see cref="M:LethalBots.Patches.MapPatches.VehicleControllerPatch.GetVehicleInput_Postfix(VehicleController)"/> to
             actually apply the input, since it only cares about positive values
             </summary>
         </member>
